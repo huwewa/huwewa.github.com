@@ -15,16 +15,19 @@ categories: IT技术
 <!-- more -->
 
 安装Markdown. 使用以下命令或者参考`http://pythonhosted.org/Markdown/install.html`
+
 ```
 C://path/to/python.exe setup.py install
 ```
 
 ###配置`_vimrc`文件###
 在文件中加上以下配置
+
 ```
 :nnoremap <F2> :!cmd /c d:\Python27\python d:\Python27\Scripts\markdown_py %:t -e utf-8 > %:r.html<CR>
 :nnoremap \e :!cmd /c start ./%:r.html<CR>
 ```
+
 注意上面的`-e utf-8`.如果md文件不是utf-8格式编码的，那么按`F2`键把md文件转换成html文件时会失败。可以在`_vimrc`文件中使用`set fileencoding=utf-8`设置新建文件以utf8格式编码。
 
 ###使用说明###

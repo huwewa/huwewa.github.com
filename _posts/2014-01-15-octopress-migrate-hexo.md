@@ -18,6 +18,7 @@ light主题没有如图的右侧按年月的归档。
 ![](http://pic.yupoo.com/huwewa/DsL1qraS/fNwZ5.png)
 
 这个可以自己签加。新建文件`archive.ejs`。内容如下：
+
 ```
 <% if (site.posts.length){ %>
   <div class="widget tag">
@@ -35,6 +36,7 @@ light主题没有如图的右侧按年月的归档。
 把到`../hexo/lib/plugins/helper/list.js`文件，然后找到里面的`exports.list_archives`方法，再在该方法里找到`var item = function(href, name, length)`。在这个函数体里加上一句`length = '<small>' + length + '</small>';`。
 
 修改前：
+
 ```
   var item = function(href, name, length){
     if (style === 'list'){
@@ -52,6 +54,7 @@ light主题没有如图的右侧按年月的归档。
 ```
 
 修改后：
+
 ```
   var item = function(href, name, length){
     length = '<small>' + length + '</small>';

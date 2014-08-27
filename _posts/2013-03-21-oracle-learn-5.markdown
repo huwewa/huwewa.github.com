@@ -6,6 +6,7 @@ comments: true
 categories: IT技术
 ---
 ###PL/SQL的块结构###
+
 ```
 declare
 ...
@@ -16,7 +17,9 @@ exception
 end;
 /
 ```
+
 一个实例:
+
 ```
 declare
 a number:=2;
@@ -29,6 +32,7 @@ end;
 <!-- more -->
 
 此时控制台不会有输出。需要先打开控制台输出：
+
 ```
 set serveroutput on size 100000
 ```
@@ -37,6 +41,7 @@ set serveroutput on size 100000
 - 行注释
 
 使用`--`注释行。如：
+
 ```
 declare
 --a number:=2;
@@ -46,15 +51,19 @@ dbms_output.put_line('a='||a);
 end;
 /
 ```
+
 - 块注释
 
 使用
+
 ```
 /*
 ...
 */
 ```
+
 注释块。如：
+
 ```
 declare
 /*
@@ -67,7 +76,9 @@ dbms_output.put_line('a='||a);
 end;
 /
 ```
+
 ###if分支###
+
 ```
 if ... then
 ...
@@ -77,7 +88,9 @@ else
 ...
 end if;
 ```
+
 如：
+
 ```
 declare
 a number:=2;
@@ -94,14 +107,18 @@ dbms_output.put_line('b的值是:'||b);
 end;
 /
 ```
+
 ###case分支##
+
 ```
 case
 when ... then ...
 else ...
 end case;
 ```
+
 如：
+
 ```
 declare
 a number:=2;

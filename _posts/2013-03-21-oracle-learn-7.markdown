@@ -7,6 +7,7 @@ categories: IT技术
 ---
 ###显式游标###
 一个例子：
+
 ```
 declare
 cursor mycur is
@@ -27,6 +28,7 @@ end;
 <!-- more -->
 
 带参数的游标。例子：
+
 ```
 declare
 cursor mycur(id number) is
@@ -43,9 +45,11 @@ close mycur;
 end;
 /
 ```
+
 值得注意的是带参数的游标，参数只给出类型就行了，不需要给出长度。
 
 使用for循环游标时不需要写：
+
 ```
 ...
 open 游标
@@ -53,7 +57,9 @@ open 游标
 close 游标
 ...
 ```
+
 一个例子：
+
 ```
 declare
 cursor mycur is
@@ -68,6 +74,7 @@ end;
 ```
 
 游标的属性`%rowcount`，表示当前第几条记录。例：
+
 ```
 declare
 cursor mycur is
@@ -82,6 +89,7 @@ end;
 ```
 
 ###隐式游标###
+
 ```
 declare
 begin
@@ -93,6 +101,7 @@ end;
 ```
 
 ###使用游标修改数据###
+
 ```
 declare
 cursor mycur is
@@ -104,6 +113,7 @@ end loop;
 end;
 /
 ```
+
 `for update`指明是要修改数据。`current of cursorname`指明修改游标当前记录。
 
 （完）

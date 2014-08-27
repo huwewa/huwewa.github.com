@@ -9,9 +9,11 @@ categories: IT技术
 - truncate
     
 truncate是DDL语言，自动提交，不可回滚。truncate作用于table。如：
+
 ```
 truncate table ww;
 ```
+
 那么表`ww`的所有数据将会被删除。但是会保留表。
 
 - delete

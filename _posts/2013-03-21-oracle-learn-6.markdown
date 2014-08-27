@@ -6,12 +6,15 @@ comments: true
 categories: IT技术
 ---
 ###基本循环loop###
+
 ```
 loop
 ... (退出条件)
 end loop;
 ```
+
 一个例子：
+
 ```
 declare
 i number:=1;
@@ -31,6 +34,7 @@ end;
 <!-- more -->
 
 退出条件也可以这样写：
+
 ```
 declare
 i number:=1;
@@ -44,13 +48,17 @@ dbms_output.put_line('外i的值是:'||i);
 end;
 /
 ```
+
 ###while循环##
+
 ```
 while expression loop
 ...
 end loop;
 ```
+
 一个例子：
+
 ```
 declare
 i number:=1;
@@ -62,13 +70,17 @@ end loop;
 end;
 /
 ```
+
 ###for循环###
+
 ```
 for counter in [reverse] start_value..end_value loop
 ...
 end loop;
 ```
+
 一个例子：
+
 ```
 declare
 begin
@@ -78,7 +90,9 @@ end loop;
 end;
 /
 ```
+
 倒序时需要加上`reverse`.如：
+
 ```
 declare
 begin
@@ -88,13 +102,17 @@ end loop;
 end;
 /
 ```
+
 ###goto循环###
+
 ```
 <<tag>>
 ...
 goto tag;
 ```
+
 一个例子：
+
 ```
 declare
 i number:=1;
@@ -109,13 +127,17 @@ dbms_output.put_line('外i的值是：'||i);
 end;
 /
 ```
+
 ###异常###
+
 ```
 exception
 when ... then
 ...
 ```
+
 一个例子：
+
 ```
 declare
 tpub varchar2(30);
@@ -128,8 +150,11 @@ dbms_output.put_line('没有找到数据。');
 end;
 /
 ```
+
 ###自定义异常###
+
 一个例子：
+
 ```
 declare
 tpub varchar2(30);
@@ -146,7 +171,9 @@ dbms_output.put_line('抛出了异常');
 end;
 /
 ```
+
 ###复合变量：记录###
+
 ```
 type record_name is record(
 a valuetype,
@@ -154,7 +181,9 @@ a valuetype,
 b valuetype);
 valuename record_name;
 ```
+
 一个例子：
+
 ```
 declare
 type rec is record(
@@ -167,7 +196,9 @@ dbms_output.put_line(myrec.price||','||myrec.pub);
 end;
 /
 ```
+
 ###记录中变量类型匹配表中的字段类型###
+
 ```
 declare
 type rec is record(
@@ -180,7 +211,9 @@ dbms_output.put_line(myrec.price||','||myrec.pub);
 end;
 /
 ```
+
 ###记录匹配表中的所有列###
+
 ```
 declare
 myrec ss%rowtype;
