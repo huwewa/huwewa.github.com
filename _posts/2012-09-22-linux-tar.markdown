@@ -1,0 +1,65 @@
+---
+layout: post
+title: "linux中的打包与压缩"
+date: 2012-09-22 13:40
+comments: true
+categories: IT技术
+---
+**之**前都是在windows中把文件压缩成zip格式，然后上传到linux上，再用unzip命令解压缩。对linux上的压缩与解压缩基本上不了解。最近了解了一下linux下tar的用法。
+
+linux下tar只是个打包与解包的工具，只打包没有压缩。
+
+```
+tar -cvf a.tar 要打包的目录或文件 #把`要打包的目录或文件`打包到a.tar文件
+tar -tvf a.tar #查看包a.tar中有哪些目录或文件
+tar -xvf a.tar #把包a.tar解包到当前目录
+tar -xvf a.tar -C 要解包到的目录 #把a.tar解包到`要解包到的目录`
+```
+
+<!-- more -->
+tar虽然是个打包工具，但是可以和压缩工具bzip2（后缀为bz2）或gzip（后缀为gz）集成。当和bzip2集成时，上面的命令为：
+
+```
+tar -jcvf a.tar.bz2 要压缩的目录或文件 #把`要压缩的目录或文件`压缩到a.tar.bz2文件
+tar -jtvf a.tar.bz2 #查看压缩包a.tar.bz2中有哪些目录或文件
+tar -jxvf a.tar.bz2 #把压缩包a.tar.bz2解压缩到当前目录
+tar -jxvf a.tar.bz2 -C 要解压缩到的目录 #把a.tar.bz2解压缩到`要解压缩到的目录`
+```
+
+当和gzip集成时，上面的命令为：
+
+```
+tar -zcvf a.tar.gz 要压缩的目录或文件 #把`要压缩的目录或文件`压缩到a.tar.gz文件
+tar -ztvf a.tar.gz #查看压缩包a.tar.gz中有哪些目录或文件
+tar -zxvf a.tar.gz #把压缩包a.tar.gz解压缩到当前目录
+tar -zxvf a.tar.gz -C 要解压缩到的目录 #把a.tar.gz解压缩到`要解压缩到的目录`
+```
+
+你会发现，当集成bzip2时，参数中多了个`j`。当集成gzip时，参数中多了个`z`。
+
+实例：
+
+```
+root@ubuntu:/home/huangweiwang/test# ls
+a  b
+root@ubuntu:/home/huangweiwang/test# tar -jcvf a.tar.bz2 a b
+a/
+b/
+root@ubuntu:/home/huangweiwang/test# ls
+a  a.tar.bz2  b
+root@ubuntu:/home/huangweiwang/test# tar -jtvf a.tar.bz2 
+tar: Record size = 8 blocks
+drwxr-xr-x root/root         0 2012-09-22 13:09 a/
+drwxr-xr-x root/root         0 2012-09-22 13:09 b/
+root@ubuntu:/home/huangweiwang/test# rm -rf a b
+root@ubuntu:/home/huangweiwang/test# ls
+a.tar.bz2
+root@ubuntu:/home/huangweiwang/test# tar -jxvf a.tar.bz2 
+tar: Record size = 8 blocks
+a/
+b/
+root@ubuntu:/home/huangweiwang/test# ls
+a  a.tar.bz2  b
+```
+
+（完）
