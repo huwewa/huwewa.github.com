@@ -8,17 +8,19 @@ tags:
 
 ##Struts##
 
+***
+
 ###Q:为什么Struts的Action中接收过来的字段中文乱码?###
 
 A:可能是在Tomcat的配置文件`server.xml`中没有配置`URIEncoding="utf-8"`
 
-    原:
+原:
 
 ```
 <Connector port="9876" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" />
 ```
 
-    修改后:
+修改后:
 
 ```
 <Connector port="9876" protocol="HTTP/1.1" connectionTimeout="20000" redirectPort="8443" URIEncoding="utf-8" />
