@@ -33,3 +33,7 @@ A:使用命令`:bufdo bdelete`
 ###Q:为什么我的Tomcat日志`catalina.out`没有按天分割?###
 
 A:可能是没有安装`cronolog`并在`catalina.sh`做分割配置.
+
+###Q:xshell中tail后怎么清屏?###
+
+A:点击右键出来的菜单里面有。多看软件操作选项。
