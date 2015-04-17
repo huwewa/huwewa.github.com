@@ -41,3 +41,7 @@ A:使用命令`:bufdo bdelete`
 ###Q:xshell中tail后怎么清屏?###
 
 A:点击右键出来的菜单里面有。多看软件操作选项。
+
+###Q:在Windows中怎样轻松创建USB启动盘?###
+
+A:使用[Rufus](https://rufus.akeo.ie/?locale=zh_CN)一键创建。[Rufus项目地址](https://github.com/pbatard/rufus)
