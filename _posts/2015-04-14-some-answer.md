@@ -45,3 +45,16 @@ A:点击右键出来的菜单里面有。多看软件操作选项。
 ###Q:在Windows中怎样轻松创建USB启动盘?###
 
 A:使用[Rufus](https://rufus.akeo.ie/?locale=zh_CN)一键创建。[Rufus项目地址](https://github.com/pbatard/rufus)
+
+###Q:`sudo apt-get install ia32-libs`出错是为什么？###
+
+A:有可能是有些依赖条件不满足。输入以下命令
+```
+sudo dpkg --add-architecture i386
+sudo apt-get update
+sudo apt-get install ia32-libs
+```
+
+###Q:Gvim中使用不了fcitx输入法怎么办?###
+
+A:可能是因为输入法的快捷键和Gvim中的快捷键冲突了。禁用`fcitx`里全局配置里的`额外的激活输入法快捷键`.
