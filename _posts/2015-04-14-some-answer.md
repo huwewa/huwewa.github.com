@@ -58,3 +58,7 @@ sudo apt-get install ia32-libs
 ###Q:Gvim中使用不了fcitx输入法怎么办?###
 
 A:可能是因为输入法的快捷键和Gvim中的快捷键冲突了。禁用`fcitx`里全局配置里的`额外的激活输入法快捷键`.
+
+###Q:怎样在eclipse中使用vi?###
+
+A:安装`viPlugin`插件。[人穷志不短 :()](http://lshang.diandian.com/post/2014-03-22/40061318328)
