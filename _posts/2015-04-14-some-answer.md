@@ -61,4 +61,4 @@ A:可能是因为输入法的快捷键和Gvim中的快捷键冲突了。禁用`f
 
 ###Q:怎样在eclipse中使用vi?###
 
-A:安装`viPlugin`插件。[人穷志不短 :()](http://lshang.diandian.com/post/2014-03-22/40061318328)
+A:安装`viPlugin`插件。[人穷志不短 :(](http://lshang.diandian.com/post/2014-03-22/40061318328)
