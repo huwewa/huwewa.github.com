@@ -62,3 +62,25 @@ A:可能是因为输入法的快捷键和Gvim中的快捷键冲突了。禁用`f
 ###Q:怎样在eclipse中使用vi?###
 
 A:安装`viPlugin`插件。[人穷志不短 :(](http://lshang.diandian.com/post/2014-03-22/40061318328)
+
+###Q:如何在Debian上简单地安装并使用shadowsocks客户端？###
+
+A:安装`pip`
+
+```
+apt-get install python-pip
+```
+
+接着安装`shadowsocks`
+
+```
+pip install shadowsocks
+```
+
+启动`shadowsocks`客户端
+
+```
+sslocal -s server_ip -p server_port  -l 1080 -k password -m rc4-md5
+```
+
+其中`server_ip`为服务器地址，`server_port`为端口，`1080`为本地端口，`password`为密码，`rc4-md5`为加密方式。
