@@ -61,7 +61,7 @@ A:可能是因为输入法的快捷键和Gvim中的快捷键冲突了。禁用`f
 
 ###Q:怎样在eclipse中使用vi?###
 
-A:安装`viPlugin`插件。[人穷志不短 :(](http://lshang.diandian.com/post/2014-03-22/40061318328)
+A:安装`viPlugin`插件。配置`Path to vim executable`选项到外部安装的`vim`。执行命令`:vim`可在eclipse中调用外部vim。[人穷志不短 :(](http://lshang.diandian.com/post/2014-03-22/40061318328)
 
 ###Q:如何在Debian上简单地安装并使用shadowsocks客户端？###
 
