@@ -84,3 +84,7 @@ sslocal -s server_ip -p server_port  -l 1080 -k password -m rc4-md5
 ```
 
 其中`server_ip`为服务器地址，`server_port`为端口，`1080`为本地端口，`password`为密码，`rc4-md5`为加密方式。
+
+###Q:Debian上怎样移除卸载`lantern`后在桌面遗留的程序图标？###
+
+A:删除`/usr/share/applications/lantern.desktop`.
