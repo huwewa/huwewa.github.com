@@ -104,3 +104,7 @@ http://abc.cn/
 ```
 :%s/[0-9]*.com/abc.cn/g
 ```
+
+###Q:Debian上怎样移除卸载`lantern`后在桌面遗留的程序图标？###
+
+A:删除`/usr/share/applications/lantern.desktop`.
