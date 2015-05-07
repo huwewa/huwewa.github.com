@@ -102,5 +102,5 @@ http://abc.cn/
 执行
 
 ```
-:%s/[0-9]*.com/abc.cn/
+:%s/[0-9]*.com/abc.cn/g
 ```
