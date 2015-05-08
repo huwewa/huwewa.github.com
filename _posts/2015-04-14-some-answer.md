@@ -117,3 +117,11 @@ A:
 import datetime
 print(datetime.datetime.fromtimestamp(int("1284101485")).strftime('%Y-%m-%d %H:%M:%S'))
 ```
+
+###Q:linux中如何根据文件内容查找文件?###
+
+A:例
+
+```
+find / -name '*.txt' | xargs grep 'bjl_texas'
+```
