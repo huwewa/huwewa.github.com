@@ -108,3 +108,12 @@ http://abc.cn/
 ###Q:Debian上怎样移除卸载`lantern`后在桌面遗留的程序图标？###
 
 A:删除`/usr/share/applications/lantern.desktop`.
+
+###Q:怎样在python中把时间戳转换为日期?###
+
+A:
+
+```
+import datetime
+print(datetime.datetime.fromtimestamp(int("1284101485")).strftime('%Y-%m-%d %H:%M:%S'))
+```
