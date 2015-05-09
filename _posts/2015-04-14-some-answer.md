@@ -125,3 +125,17 @@ A:例
 ```
 find / -name '*.txt' | xargs grep 'bjl_texas'
 ```
+
+###Q:在git中怎样查看一个文件的修改记录?###
+
+A: 查看文件的修改记录
+
+```
+git log -p filename
+```
+
+查看目前文件每一行是哪个提交最后的改动
+
+```
+git blame filename
+```
