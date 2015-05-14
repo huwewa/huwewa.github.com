@@ -139,3 +139,11 @@ git log -p filename
 ```
 git blame filename
 ```
+
+###Q:怎样在vim中删除空白行?###
+
+A:
+
+```
+:g/^$/d
+```
