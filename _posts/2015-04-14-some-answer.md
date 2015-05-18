@@ -30,6 +30,14 @@ A:可能是在Tomcat的配置文件`server.xml`中没有配置`URIEncoding="utf-
 
 A:可能是没有安装`cronolog`并在`catalina.sh`做分割配置.
 
+###Q:java中打印数组的最佳方式是什么?###
+
+A:使用以下方式可以打印多维数组
+
+```
+Arrays.deepToString(arr);
+```
+
 ##Tools##
 
 ***
