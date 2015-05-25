@@ -175,3 +175,27 @@ FROM information_schema.TABLES
 WHERE table_schema = "database_name"
 ORDER BY (data_length + index_length) DESC;
 ```
+###Q:在Mysql中怎样导出查询结果集到txt文件？###
+
+A:
+
+```
+SELECT  * FROM table WHERE id<100 INTO  OUTFILE '/tmp/table.txt'
+```
+
+###Q:怎样在Vim中删除匹配的行和删除不匹配的行?###
+
+A:
+
+```
+g/xxx/d 删除包含xxx的行
+v/xxx/d 删除不含xxx的行
+```
+
+###Q:怎样在Vim中统计匹配的个数?###
+
+A:
+
+```
+:%s/xxx//gn n表示只报告匹配的个数，不进行实际替换
+```
