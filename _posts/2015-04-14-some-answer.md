@@ -223,3 +223,11 @@ A:
 ```
 du -sh *
 ```
+
+###Q:怎样在linux中添加软链接?###
+
+A:
+
+```
+ln -s /home/wywon/idea-IU-135.1306/bin/* /bin
+```
