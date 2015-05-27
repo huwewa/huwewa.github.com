@@ -207,3 +207,19 @@ A:
 ```
 du -sh *
 ```
+
+###Q:在Linux中怎样修改文件的所有者和所属组?###
+
+A:
+
+```
+chown user:group filename
+```
+
+###Q:在Linux中怎样查看文件大小?###
+
+A:
+
+```
+du -sh *
+```
