@@ -231,3 +231,9 @@ A:
 ```
 ln -s /home/wywon/idea-IU-135.1306/bin/* /bin
 ```
+
+###Q:在Linux上的eclipse导入windows下的eclipse项目出现乱码，怎么解决?###
+
+A:
+
+eclipse->Window->Preferences->General->Content Types，右侧选择Java Source File，然后在下面的defaut encoding中写入gbk，update即可。
