@@ -242,3 +242,11 @@ eclipse->Window->Preferences->General->Content Types，右侧选择Java Source F
 A:
 
 下载[GParted](http://gparted.org/liveusb.php)镜像，然后安装[Tuxboot](http://tuxboot.org/)。把镜像做成U盘启动盘。再从U盘启动，打开GParted进行分区调整。
+
+###Q:怎样在Linux中查看大文件?###
+
+A:
+
+```
+find / -size +100M -exec ls -lh {} \;
+```
