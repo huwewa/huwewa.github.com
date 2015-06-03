@@ -231,3 +231,8 @@ A:
 ```
 ln -s /home/wywon/idea-IU-135.1306/bin/* /bin
 ```
+###Q:Debian的根目录满了怎么办?###
+
+A:
+
+下载[GParted](http://gparted.org/liveusb.php)镜像，然后安装[Tuxboot](http://tuxboot.org/)。把镜像做成U盘启动盘。再从U盘启动，打开GParted进行分区调整。
