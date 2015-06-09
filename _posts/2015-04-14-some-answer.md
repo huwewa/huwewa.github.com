@@ -271,4 +271,6 @@ A: 在Vim中设置文本格式
 
 A:
 
-> select date_format(regTime,"%Y-%m-%d"),sum(case when comeFrom=0 then 1 else 0 end),sum(case when comeFrom=1 then 1 else 0 end),sum(case when comeFrom=2 then 1 else 0 end)  from t_user_detail  group by date_format(regTime,"%Y-%m-%d");
+```
+SELECT DATE_FORMAT(regTime,"%Y-%m-%d"),SUM(CASE WHEN comeFrom=0 THEN 1 ELSE 0 END),SUM(CASE WHEN comeFrom=1 THEN 1 ELSE 0 END),SUM(CASE WHEN comeFrom=2 THEN 1 ELSE 0 END)  FROM t_user_detail  GROUP BY DATE_FORMAT(regTime,"%Y-%m-%d");
+```
