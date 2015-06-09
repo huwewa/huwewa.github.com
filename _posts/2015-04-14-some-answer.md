@@ -258,3 +258,18 @@ A:
 ```
 grep -B 2 -A 2  text
 ```
+
+###Q:在Vim中编辑的文本在记事本中不换行，怎么办?###
+
+A: 在Vim中设置文本格式
+
+```
+:set ff=dos
+```
+
+###Q:在Mysql中怎样统计某个字值取各个值的次数?###
+
+A:
+```
+select date_format(regTime,"%Y-%m-%d"),sum(case when comeFrom=0 then 1 else 0 end),sum(case when comeFrom=1 then 1 else 0 end),sum(case when comeFrom=2 then 1 else 0 end)  from t_user_detail  group by date_format(regTime,"%Y-%m-%d");
+```
