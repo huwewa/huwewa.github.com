@@ -270,6 +270,5 @@ A: 在Vim中设置文本格式
 ###Q:在Mysql中怎样统计某个字值取各个值的次数?###
 
 A:
-```
-select date_format(regTime,"%Y-%m-%d"),sum(case when comeFrom=0 then 1 else 0 end),sum(case when comeFrom=1 then 1 else 0 end),sum(case when comeFrom=2 then 1 else 0 end)  from t_user_detail  group by date_format(regTime,"%Y-%m-%d");
-```
+
+> select date_format(regTime,"%Y-%m-%d"),sum(case when comeFrom=0 then 1 else 0 end),sum(case when comeFrom=1 then 1 else 0 end),sum(case when comeFrom=2 then 1 else 0 end)  from t_user_detail  group by date_format(regTime,"%Y-%m-%d");
