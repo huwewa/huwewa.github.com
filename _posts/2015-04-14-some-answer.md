@@ -274,3 +274,13 @@ A:
 ```
 SELECT DATE_FORMAT(regTime,"%Y-%m-%d"),SUM(CASE WHEN comeFrom=0 THEN 1 ELSE 0 END),SUM(CASE WHEN comeFrom=1 THEN 1 ELSE 0 END),SUM(CASE WHEN comeFrom=2 THEN 1 ELSE 0 END)  FROM t_user_detail  GROUP BY DATE_FORMAT(regTime,"%Y-%m-%d");
 ```
+
+###Q:在Vim中怎样转换文本的大小写?###
+
+A:
+
+```
+Toggle case "HellO" to "hELLo" with `g~` then a movement.
+Uppercase "HellO" to "HELLO" with `gU` then a movement.
+Lowercase "HellO" to "hello" with `gu` then a movement.
+```
