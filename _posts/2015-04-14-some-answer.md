@@ -284,3 +284,11 @@ Toggle case "HellO" to "hELLo" with `g~` then a movement.
 Uppercase "HellO" to "HELLO" with `gU` then a movement.
 Lowercase "HellO" to "hello" with `gu` then a movement.
 ```
+
+###Q:怎样从本地拷贝文件夹到远程主机?###
+
+A:
+
+```
+scp -r -P22 redis-2.6.11 root@118.193.133.100:/opt/
+```
