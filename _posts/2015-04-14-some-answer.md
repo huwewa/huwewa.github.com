@@ -290,7 +290,7 @@ Lowercase "HellO" to "hello" with `gu` then a movement.
 A:
 
 ```
-scp -r -P22 redis-2.6.11 root@118.193.133.100:/opt/
+scp -r -P22 redis-2.6.11 root@xx.xx.xx.xx:/opt/
 ```
 
 ###Q:如何建立目录软链接?###
