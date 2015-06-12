@@ -292,3 +292,26 @@ A:
 ```
 scp -r -P22 redis-2.6.11 root@118.193.133.100:/opt/
 ```
+
+###Q:如何建立目录软链接?###
+
+A:
+
+```
+[root@MyCloudServer tomcat]# pwd
+/log/tomcat
+
+[root@MyCloudServer log]# pwd
+/home/log
+[root@MyCloudServer log]# ll
+total 8
+drwxr-xr-x 2 root root 4096 Jun 12 14:50 tomcat-gameserver
+drwxr-xr-x 2 root root 4096 Jun 12 14:50 tomcat-webserver
+
+[root@MyCloudServer tomcat]# pwd
+/log/tomcat
+[root@MyCloudServer tomcat]# ll
+total 0
+lrwxrwxrwx 1 root root 27 Jun 12 14:51 tomcat-gameserver -> /home/log/tomcat-gameserver
+lrwxrwxrwx 1 root root 26 Jun 12 14:51 tomcat-webserver -> /home/log/tomcat-webserver
+```
