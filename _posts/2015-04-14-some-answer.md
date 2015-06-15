@@ -308,6 +308,8 @@ total 8
 drwxr-xr-x 2 root root 4096 Jun 12 14:50 tomcat-gameserver
 drwxr-xr-x 2 root root 4096 Jun 12 14:50 tomcat-webserver
 
+[root@MyServer bin]# ln -s /home/log/tomcat-gameserver /log/tomcat
+
 [root@MyCloudServer tomcat]# pwd
 /log/tomcat
 [root@MyCloudServer tomcat]# ll
