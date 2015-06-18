@@ -335,3 +335,11 @@ if ($host = 'xxx.com' ) {
     rewrite ^/(.*)$  http://www.xxx.com/$1   permanent;
 }
 ```
+
+###Q:Nginx中出现http302时要注意什么?###
+
+A:在`nginx.conf`中检查是否做了端口代理。如
+
+```
+proxy_pass http://127.0.0.1:9001;
+```
