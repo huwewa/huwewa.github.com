@@ -325,3 +325,13 @@ A:在从实例里配置`redis.conf`
 ```
 slaveof <masterip> <masterport>
 ```
+
+###Q:Nginx中怎样重定向根域名至带www的子域名?###
+
+A:在`nginx.conf`中的server段加入以下代码
+
+```
+if ($host = 'xxx.com' ) {
+    rewrite ^/(.*)$  http://www.xxx.com/$1   permanent;
+}
+```
