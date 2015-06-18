@@ -317,3 +317,11 @@ total 0
 lrwxrwxrwx 1 root root 27 Jun 12 14:51 tomcat-gameserver -> /home/log/tomcat-gameserver
 lrwxrwxrwx 1 root root 26 Jun 12 14:51 tomcat-webserver -> /home/log/tomcat-webserver
 ```
+
+###Q:Redis的主从复制?###
+
+A:在从实例里配置`redis.conf`
+
+```
+slaveof <masterip> <masterport>
+```
