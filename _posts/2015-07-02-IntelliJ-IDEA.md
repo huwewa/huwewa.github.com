@@ -48,6 +48,8 @@ tags:
 
  - Ctrl + Alt + H 查看方法的调用层级
 
+ - Ctrl + Shift + E 查看最近编辑的文件
+
 ###问题###
 
  - 编译从Eclipse导入的项目报非法转义字符
