@@ -54,6 +54,8 @@ tags:
 
  - Ctrl + Shift + U 大小写转换
 
+ - Alt + 6 显示todo
+
 ###问题###
 
  - 编译从Eclipse导入的项目报非法转义字符
