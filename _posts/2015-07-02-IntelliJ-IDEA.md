@@ -50,6 +50,10 @@ tags:
 
  - Ctrl + Shift + E 查看最近编辑的文件
 
+ - Alt + Insert 生成Getter和Setter方法
+
+ - Ctrl + Shift + U 大小写转换
+
 ###问题###
 
  - 编译从Eclipse导入的项目报非法转义字符
