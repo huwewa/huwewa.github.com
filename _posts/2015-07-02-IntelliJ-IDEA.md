@@ -54,7 +54,9 @@ tags:
 
  - Ctrl + Shift + U 大小写转换
 
- - Alt + 6 显示todo
+ - Alt + 6 显示todo (可结合正则表达式配置自定义视图: 如 `\btodo\b.*\bhuangww\b.*`)
+
+ - Ctrl + Alt + Space 补全当前行
 
 ###问题###
 
