@@ -58,6 +58,8 @@ tags:
 
  - Ctrl + Alt + Space 补全当前行
 
+ - Ctrl + Shift + V 调出最近复制的N份内容
+
 ###问题###
 
  - 编译从Eclipse导入的项目报非法转义字符
