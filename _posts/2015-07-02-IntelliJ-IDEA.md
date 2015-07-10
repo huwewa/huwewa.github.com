@@ -48,7 +48,7 @@ tags:
 
  - Ctrl + Alt + H 查看方法的调用层级
 
- - Ctrl + Shift + E 查看最近编辑的文件
+ - Ctrl + E 查看最近编辑的文件
 
  - Alt + Insert 生成Getter和Setter方法
 
@@ -59,8 +59,6 @@ tags:
  - Ctrl + Alt + Space 补全当前行
 
  - Ctrl + Shift + V 调出最近复制的N份内容
-
- - Ctrl + E 打开最近打开过的文件视图
 
 ###问题###
 
