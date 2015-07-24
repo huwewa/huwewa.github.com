@@ -370,3 +370,11 @@ A:
 ```
  history | awk '{CMD[$2]++;count++;} END { for (a in CMD )print CMD[ a ]" " CMD[ a ]/count*100 "% " a }' | grep -v "./" | column -c3 -s " " -t |sort -nr | nl | head -n10
 ```
+
+###Q:Oracle中查询两个日期差的毫秒数?###
+
+A:
+
+```
+ select Round(TO_NUMBER(sysdate-LastAccessTime) * 24 * 60 * 60 * 1000) from userpoint where userid=1158321;
+```
