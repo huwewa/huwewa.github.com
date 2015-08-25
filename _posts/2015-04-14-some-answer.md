@@ -398,3 +398,18 @@ A:
  `q`退出宏。
  `15@a`操作15次。
 ```
+
+###Q:Oracle中怎样同时插入3张表?###
+
+A:
+
+```
+ insert all 
+ into usermsg(msgid,fromuserid,fromway,touserid,boxid,msgtype,status,flag,createtime,subject,msgiconid,msgdata) 
+ values(usermsg_seq.nextval,0,2,userid,3,1,1,0,sysdate,'第n封邮件',2,'') 
+ into usermsgparam(MsgID,MsgSubType,Response,ReferID1,ReferID2) 
+ values(usermsg_seq.nextval,0,0,0,userid)
+ into usermsgcontent(msgid,Content) 
+ values(usermsg_seq.nextval,'这是一封邮件，是一封邮件。')
+ select 1158321 as userid from dual;
+```
