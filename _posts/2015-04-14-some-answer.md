@@ -378,3 +378,23 @@ A:
 ```
  select Round(TO_NUMBER(sysdate-LastAccessTime) * 24 * 60 * 60 * 1000) from userpoint where userid=1158321;
 ```
+
+###Q:怎样在Vim中使用宏?###
+
+A:
+
+```
+ 样本：101 aa.
+ 想要实现效果：101 aa.
+               102 aa.
+               103 aa.
+               ...
+
+ 先输入样本行`101 aa.`
+ 退出到普通模式。输入`qa`开始录制宏。
+ `yy`复制样本行。
+ `p`粘贴到新的一行。
+ `Ctrl A`数字加1。
+ `q`退出宏。
+ `15@a`操作15次。
+```
