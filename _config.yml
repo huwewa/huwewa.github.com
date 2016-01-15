@@ -10,7 +10,8 @@ url: "http://wywon.com" # the base hostname & protocol for your site
 
 # Build settings
 # markdown: kramdown
-markdown: MaRuKu #redcarpet #enable the code block ```
+markdown: redcarpet #enable the code block ```
+highlighter: pygments
 
 # Outputting
 permalink: /:year/:month/:day/:title.html
