@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Wiki
 permalink: /wiki.html
 ---
