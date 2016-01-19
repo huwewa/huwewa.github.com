@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Wiki
+title: ÖªÊ¶µã
 permalink: /wiki.html
 ---
 
