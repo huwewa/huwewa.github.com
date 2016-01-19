@@ -1,6 +1,6 @@
 = Wywon's Wiki =
 
-[HomePage](/)
+[http://wywon.com HomePage]
 
 == IT ==
 * [[Wiki快捷键]]
