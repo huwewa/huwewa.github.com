@@ -1,7 +1,7 @@
 ---
 layout: post
-title: ÖªÊ¶µã
+title: Wiki
 permalink: /wiki.html
 ---
 
-wywon's wiki
+{% include empty.html %}
