@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="Stylesheet" type="text/css" href="style.css">
+<title>Wiki基本语法</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<body>
+
+<pre>
+= 一级标题 =  
+== 二级标题 ==
+=== 三级标题 ===
+此次类推。
+
+当标题前面有空白时，标题文本居中对齐。
+       = 我是居中的标题 =
+
+*粗体*  _斜体_  ~~删除线~~   `Some Code 代码` 
+
+注意 这几个针对文本格式的标签，都要求左右留有空白。
+请注意你的代码高亮，一般来说，有了相应的高亮，你用的wiki标签才生效。
+
+^上^标  ,,下,,标
+
+    四个空格缩进的内容会被转成blockquote
+    
+{{{ class="brush:php"
+这中间的内容会被放到一个 pre 里，适合贴代码。
+上面的 class 是可选的，一般用来安排代码高亮。
+事实上，这一块代码展示就是放在了一个 pre 里。
+</pre>
+
+<p>
+WikiItem  大写开头的驼峰英文会被自动当作一个维基词条，并添加链接
+<a href="Wiki Item.html">Wiki Item</a>  这是手动建立维基词条的方式
+<a href="wiki item.html">description</a>  输出HTML时显示description，链到 wiki item
+<a href="http:&#47;&#47;ktmud.com&#47;">http://ktmud.com/</a>  外部URL会被自动转换成链接
+[<a href="http:&#47;&#47;ktmud.com">http://ktmud.com</a> Ktmud]  带文字的外链
+[images/hello.jpg] 输出 &lt;img src="images/hello.jpg" /&gt;
+<a href="images&#47;hello.jpg.html">images/hello.jpg</a> 输出图片，并链向图片地址
+</p>
+
+<ul>
+<li>
+无序列表 条目一
+
+<li>
+无序列表 条目二 
+
+<ul>
+<li>
+子列表 条目一
+
+<li>
+自列表 条目二
+
+</ul>
+</ul>
+
+<ol>
+<li>
+有序列表 条目一
+
+<li>
+有序列表 条目二
+
+</ol>
+
+<ul>
+<li>
+和 - 是等价的，后面必须跟一个空格
+
+</ul>
+<p>
+}}}
+</p>
+
+</body>
+</html>
