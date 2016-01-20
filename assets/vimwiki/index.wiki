@@ -1,7 +1,0 @@
-= Wywon's Wiki =
-
-[[/|HomePage]]
-
-== IT ==
-* [[Wiki快捷键]]
-* [[VIM]]
