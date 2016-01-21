@@ -15,3 +15,5 @@ tags:
     autocmd BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} map <Leader>p :!start "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" "%:p"<CR>
 
 - 在vim中编辑markdown文件，保存后按下`<Leader>p`即可在Chrome中实时预览。
+
+（完）
