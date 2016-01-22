@@ -8,7 +8,6 @@ tags:
 
 ###How to Fix a Kindle that Won't Download Books From Your Archived Items###
 
-```
 So you’ve got a new book in your Archived items on your Kindle. But for some reason every time you try to download that new purchase you get the message “Sorry your book cannot be downloaded at this time. Please try again later.”
 
 Turning the Kindle on and off doesn’t seem to clear the issue.
@@ -28,7 +27,6 @@ When you RELEASE after 20 seconds, wait. The screen should flicker. Then a momen
 After the Kindle turns back on, go to your Archived items and try to re-download the book in question…you should have a successful download.
 
 Thanks to Kindle tech support for walking me through this.
-```
 
 [原文地址](http://www.scottallen.com/2011/10/how-to-fix-a-kindle-that-wont-download-books-from-your-archived-items/)
 
