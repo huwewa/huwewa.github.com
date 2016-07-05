@@ -9,8 +9,14 @@ url: "http://wywon.com" # the base hostname & protocol for your site
 # github_username:  huwewa
 
 # Build settings
-#markdown: kramdown
-markdown: redcarpet #enable the code block ```
+markdown: kramdown
+#markdown: redcarpet #enable the code block ```
+kramdown:
+   input: GFM
+   hard_wrap: false
+ gems:
+   - jekyll-coffeescript
+   - jekyll-paginate
 
 # post date timezone
 future: true
