@@ -1,5 +1,5 @@
 # Site settings
-title: 碎碎念
+title: "碎碎念"
 # email: huwewa@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   思绪稍纵即逝，偶尔在这里停留。
@@ -14,7 +14,7 @@ markdown: kramdown
 kramdown:
    input: GFM
    hard_wrap: false
- gems:
+gems:
    - jekyll-coffeescript
    - jekyll-paginate
 
