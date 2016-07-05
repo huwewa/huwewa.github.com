@@ -9,7 +9,7 @@
 title: "碎碎念"
 #email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  思绪稍纵即逝，偶尔在这里停留。
+  思绪稍纵即逝，偶尔在这里停留
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://wywon.com" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
@@ -17,3 +17,5 @@ url: "http://wywon.com" # the base hostname & protocol for your site
 
 # Build settings
 markdown: kramdown
+
+future: true
