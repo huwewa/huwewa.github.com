@@ -40,7 +40,7 @@ whitelist:
 future: false
 
 # Outputting
-permalink: /:categories/:year/:month/:day/:title.html
+permalink: /:year/:month/:day/:title.html
 paginate: 10
 paginate_path: "/page:num/"
 timezone: null
