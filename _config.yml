@@ -37,7 +37,7 @@ whitelist:
   - jekyll-redirect-from
 
 # post date timezone
-future: true
+future: false
 
 # Outputting
 permalink: /:categories/:year/:month/:day/:title.html
