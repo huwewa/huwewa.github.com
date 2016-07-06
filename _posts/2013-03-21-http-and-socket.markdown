@@ -5,9 +5,9 @@ date: 2013-03-21 21:26
 comments: true
 categories: IT技术
 ---
-###http###
+### http
 http是基于tcp/ip协议的。
-###socket###
+### socket
 socket是对tcp/ip的封装，本身并不是一个协议，而是一个调用接口API。
 
 参考：

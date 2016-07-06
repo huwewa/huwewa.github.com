@@ -5,7 +5,7 @@ date: 2013-03-21 21:15
 comments: true
 categories: IT技术
 ---
-###表的管理###
+### 表的管理
 完整性与约束：
 如新建了一个表，如下：
 
@@ -56,7 +56,7 @@ alter table mytable add constraint ck_name check (name='f' or name='m');
 
 这样就限制了`name`字段只能输入`f`或`m`。
 
-###索引的管理###
+### 索引的管理
 当一张表中建立唯一主键时会在这个键上自动建立一个索引。也可以手动在其他字段上建立索引：
 
 ```

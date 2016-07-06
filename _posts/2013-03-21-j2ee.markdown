@@ -5,7 +5,7 @@ date: 2013-03-21 21:24
 comments: true
 categories: IT技术
 ---
-###Spring###
+### Spring
 J2EE中很多使用Spring的。首先要知道Spring能做些什么，我们才能更好的利用它。一般来说，在项目中我们使用到最多的是：
 
 - jdbc支持
@@ -26,7 +26,7 @@ Spring可以指定哪种类型的方法需要支持事务。
 
 当需要对某些方法支持事务或需要对某些方法执行完后执行某个特定的方法，这时可以使用切面。面这些只要在配置文件中配置就可实现。
 
-###Struts###
+### Struts
 J2EE中很多使用Struts控制跳转。当然也可以直接使用Servlet.
 
 - Struts1.x与Struts2.x

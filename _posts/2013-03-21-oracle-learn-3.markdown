@@ -5,12 +5,12 @@ date: 2013-03-21 20:51
 comments: true
 categories: IT技术
 ---
-###结构化查询语言(SQL)###
+### 结构化查询语言(SQL)
 - 数据定义语言(DDL)
 - 数据控制语言(DCL)
 - 数据操纵语言(DML)
 
-###DDL###
+### DDL
 - create
 
 ```
@@ -31,7 +31,7 @@ alter table aa rename column no to id;
 drop table aa;
 ```
 
-###DCL###
+### DCL
 - grant
 
 新建用户后，授权登录权限
@@ -62,7 +62,7 @@ revoke select on mm from aa;
 
 收回权限后，aa用户不能再查询mm表。
 
-###DML###
+### DML
 - insert
 
 ```
@@ -87,7 +87,7 @@ update mm set no=3 where no=1;
 delete from mm where no=3;
 ```
 
-###Oracle常用函数###
+### Oracle常用函数
 - length
 
 ```

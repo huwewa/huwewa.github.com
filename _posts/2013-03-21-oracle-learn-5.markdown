@@ -5,7 +5,7 @@ date: 2013-03-21 20:58
 comments: true
 categories: IT技术
 ---
-###PL/SQL的块结构###
+### PL/SQL的块结构
 
 ```
 declare
@@ -37,7 +37,7 @@ end;
 set serveroutput on size 100000
 ```
 
-###PL/SQL的注释###
+### PL/SQL的注释
 - 行注释
 
 使用`--`注释行。如：
@@ -77,7 +77,7 @@ end;
 /
 ```
 
-###if分支###
+### if分支
 
 ```
 if ... then
@@ -108,7 +108,7 @@ end;
 /
 ```
 
-###case分支##
+### case分支
 
 ```
 case

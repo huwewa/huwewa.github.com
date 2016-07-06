@@ -5,7 +5,7 @@ date: 2013-03-21 20:54
 comments: true
 categories: IT技术
 ---
-###分组查询###
+### 分组查询
 - group by
 
 ```
@@ -60,7 +60,7 @@ select * from books where like pub='%i%';
 
 查找i前和i后各匹配多个字符。
 
-###表的连接###
+### 表的连接
 - 内连接
 
 只查询两个或多个表中的匹配部分。
@@ -105,7 +105,7 @@ select ss.no,ww.name from ss join ww on ss.price(+)=ww.price;
 select ss.no,ww.name from ss,ww where ss.price(+)=ww.price;
 ```
 
-###子查询###
+### 子查询
 - 无关子查询
 
 ```
@@ -118,13 +118,13 @@ select * from ss where no in(select price from ww);
 select * from ss where price in(select price from ww where ss.price=ww.price);
 ```
 
-###合并###
+### 合并
 
 ```
 select price from ss union select price from ww;
 ```
 
-###根据已有表创建表###
+### 根据已有表创建表
 
 ```
 create table gg as select price from ss;

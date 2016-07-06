@@ -5,15 +5,15 @@ date: 2014-03-18 22:48:23
 categories: IT技术
 tags:
 ---
-###安装gVim###
+### 安装gVim
 我的安装目录是`D:\Vim`。安装完成后设置两个环境变量`VIM`和`VIMRUNTIME`。其中`VIM`的值是`D:\Vim`，`VIMRUNTIME`的值是`D:\Vim\vim74`。
 
 <!-- more -->
 
-###安装Git###
+### 安装Git
 我的安装目录是`D:\Git`。安装后在环境变量`Path`中添加`D:\Git\cmd`，设置后在cmd中`git --version`查看是否安装成功。
 
-###配置curl脚本###
+### 配置curl脚本
 在`D:\Git\cmd`目录中新建名为`curl.cmd`的文件。内容如下：
 
 ```

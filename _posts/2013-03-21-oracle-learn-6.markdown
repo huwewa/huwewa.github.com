@@ -5,7 +5,7 @@ date: 2013-03-21 21:01
 comments: true
 categories: IT技术
 ---
-###基本循环loop###
+### 基本循环loop
 
 ```
 loop
@@ -49,7 +49,7 @@ end;
 /
 ```
 
-###while循环##
+### while循环
 
 ```
 while expression loop
@@ -71,7 +71,7 @@ end;
 /
 ```
 
-###for循环###
+### for循环
 
 ```
 for counter in [reverse] start_value..end_value loop
@@ -103,7 +103,7 @@ end;
 /
 ```
 
-###goto循环###
+### goto循环
 
 ```
 <<tag>>
@@ -128,7 +128,7 @@ end;
 /
 ```
 
-###异常###
+### 异常
 
 ```
 exception
@@ -151,7 +151,7 @@ end;
 /
 ```
 
-###自定义异常###
+### 自定义异常
 
 一个例子：
 
@@ -172,7 +172,7 @@ end;
 /
 ```
 
-###复合变量：记录###
+### 复合变量：记录
 
 ```
 type record_name is record(
@@ -197,7 +197,7 @@ end;
 /
 ```
 
-###记录中变量类型匹配表中的字段类型###
+### 记录中变量类型匹配表中的字段类型
 
 ```
 declare
@@ -212,7 +212,7 @@ end;
 /
 ```
 
-###记录匹配表中的所有列###
+### 记录匹配表中的所有列
 
 ```
 declare

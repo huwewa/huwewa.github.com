@@ -5,7 +5,7 @@ date: 2013-03-21 20:44
 comments: true
 categories: IT技术
 ---
-###创建表空间###
+### 创建表空间
 
 - 运行sql plus，登录
 
@@ -54,7 +54,7 @@ insert into books(no,name) values(2,'ruby');
 insert into books(no,name) values(3,'java');
 ```
 
-###数据库的启动和关闭###
+### 数据库的启动和关闭
 使用`shutdown immediate`命令关闭数据库时，要重新打开数据库的话要使用以下命令
 
 ```
@@ -63,16 +63,16 @@ startup
 conn username/password
 ```
 
-###sql plus帮助文档###
+### sql plus帮助文档
 使用`help index`查看sql plus支持的命令。要查看具体某个命令的用法，使用`? 要查年的命令名`
 
-###打开空格行支持###
+### 打开空格行支持
 
 ```
 set blanklines on
 ```
 
-###替代变量的使用###
+### 替代变量的使用
 
 ```
 select * from books where no=&tt
@@ -80,7 +80,7 @@ select * from books where no=&tt
 
 运行时会要求输入tt变量的值，并显示结果。
 
-###缓冲区的使用###
+### 缓冲区的使用
 使用`l`(list)查看缓冲区内容。查看缓冲区的某行时使用`l 要查看的行`。查看指定某几行时使用`l 起始行 结束行`。
 
 编辑缓冲区内容时使用`edit`,windows下会默认打开记事本编辑。
@@ -97,7 +97,7 @@ select * from books where no=&tt
 
 `c /要更改的内容/更改后的内容`
 
-###sql plus对报表的支持###
+### sql plus对报表的支持
 - 对某一列起别名
 
 `col 要起别名的列 heading "别名"`

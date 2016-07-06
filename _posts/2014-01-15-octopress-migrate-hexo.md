@@ -5,10 +5,10 @@ date: 2014-01-15 10:59:59
 categories: IT技术
 tags:
 ---
-###安装hexo###
+### 安装hexo
 具体参考[这里](http://zespia.tw/hexo/docs/)。
 
-###安装light主题###
+### 安装light主题
 安装过程参考[这里](https://github.com/hexojs/hexo-theme-light)。
 
 light主题没有如图的右侧按年月的归档。
@@ -73,13 +73,13 @@ light主题没有如图的右侧按年月的归档。
 
 ```
 
-###个性化配置###
+### 个性化配置
 个性化配置文件有两个。一个是主程序的`..\_config.yml`，一个是主题的`\themes\light\_config.yml`。
 
-###博文markdown文件的迁移###
+### 博文markdown文件的迁移
 参考[这里](http://zespia.tw/hexo/docs/migration.html)。
 
-###迁移后博客的版本控制###
+### 迁移后博客的版本控制
 在Octopress中，提交到github时后有一个source分支，里面托管的是博客的源文件。而在Hexo中`hexo d`后，提交到github上只有生成后的站点文件。为了解决这个问题，我在github上新建了一个仓库(不是站点文件仓库`username.github.com`)。然后把整个博客目录都托管到github上面。这样在不同的电脑上就可以重复部署了。
 
 （完）

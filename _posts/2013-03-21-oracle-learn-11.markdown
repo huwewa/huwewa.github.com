@@ -5,7 +5,7 @@ date: 2013-03-21 21:12
 comments: true
 categories: IT技术
 ---
-###权限管理###
+### 权限管理
 一般是通过角色对用户权限进行管理。创建角色并把用户分配到角色：
 
 ```
@@ -51,7 +51,7 @@ select * from huwewa.books;
 grant select on huwewa.books to bb;
 ```
 
-###表空间的创建###
+### 表空间的创建
 创建表空间：
 
 ```
