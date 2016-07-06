@@ -33,6 +33,7 @@ whitelist:
   - jekyll-coffeescript
   - jekyll-gist
   - jekyll-mentions
+  - jekyll-paginate
   - jekyll-redirect-from
 
 # post date timezone
