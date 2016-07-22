@@ -9,10 +9,10 @@ title: Archives
 {% assign counter = 0 %}
 {% for post in site.posts %}
 
-  {% unless post.next %}
-  <h3>{{ post.date | date: '%Y' }}({{ counter }})</h3>
-  {% assign counter = counter | plus: 1 %}
-  {% else %}
+  <!--{% unless post.next %}-->
+  <!--<h3>{{ post.date | date: '%Y' }}({{ counter }})</h3>-->
+  <!--{% assign counter = counter | plus: 1 %}-->
+  <!--{% else %}-->
     {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
     {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
     {% assign counter = counter | plus: 1 %}
@@ -20,7 +20,7 @@ title: Archives
       <h3>{{ post.date | date: '%Y' }}({{ counter }})</h3>
       {% assign counter = 0 %}
     {% endif %}
-  {% endunless %}
+  <!--{% endunless %}-->
 
   <li>{{ post.date | date:"%b" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
