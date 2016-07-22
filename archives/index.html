@@ -9,7 +9,7 @@ title: Archives
 {% assign counter = 0 %}
 {% for post in site.posts %}
 
-  {% unless post %}
+  {% unless post.previous %}
   <h3>{{ post.date | date: '%Y' }}({{ counter }})</h3>
   <!--{% assign counter = counter | plus: 1 %}-->
   <!--{% else %}-->
