@@ -20,14 +20,31 @@ title: Archives
 <!--{% endfor %}-->
 
 
+{% assign counterInit = 0 %}
+{% for post in site.posts %}
+  {% assign thisyear = post.date | date: "%Y" %}
+  {% assign prevyear = post.previous.date | date: "%Y" %}
+  {% assign counterInit = counterInit | plus: 1 %}
+  {% if thisyear != prevyear %}
+    {% break %}
+  {% endif %}
+{% endfor %}
+
 {% assign counter = 0 %}
 {% for post in site.posts %}
+  {% unless post.next %}
+    <h3>{{ post.date | date: '%Y' }}({{ counterInit }})</h3>
+  {% else %}
+
+
   {% assign thisyear = post.date | date: "%Y" %}
   {% assign prevyear = post.previous.date | date: "%Y" %}
   {% assign counter = counter | plus: 1 %}
   {% if thisyear != prevyear %}
-    <h3><a href="/archive/#{{ post.date | date:"%Y" }}">{{ thisyear }} ({{ counter }})</a></h3>
+    <h3>{{ post.date | date: '%Y' }}({{ counter }})</h3>
     {% assign counter = 0 %}
   {% endif %}
+  {% assign counterInit = counterInit | plus: 1 %}
+  { endunless }
   <li>{{ post.date | date:"%b" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
