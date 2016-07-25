@@ -32,11 +32,11 @@ title: Archives
 
 {% assign counter = 0 %}
 {% for post in site.posts %}
-  {% unless post.previous %}
+  {% unless post.next %}
     <h3>{{ post.date | date: '%Y' }}({{ counterInit }})</h3>
   {% else %}
-  {% assign thisyear = post.previous.date | date: "%Y" %}
-  {% assign nextyear = post.date | date: "%Y" %}
+  {% assign thisyear = post.date | date: "%Y" %}
+  {% assign nextyear = post.next.date | date: "%Y" %}
   {% assign counter = counter | plus: 1 %}
   {% if thisyear != nextyear %}
     <h3>{{ post.date | date: '%Y' }}({{ counter }})</h3>
