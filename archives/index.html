@@ -42,7 +42,7 @@ title: Archives
   {% if thisyear != nextyear %}
     <h3>{{ post.date | date: '%Y' }}({{ counter }})</h3>
     {% capture new_val %}{{ post.date | date: '%Y' }}_{{ counter }},{% endcapture %}
-    {% assign year_count = year_count %}
+    {% assign year_count = year_count | append: new_val %}
     {% assign counter = 0 %}
   {% endif %}
   {% endunless %}
