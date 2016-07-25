@@ -39,62 +39,26 @@ title: Archives
     {% assign temval = year_count | split: "," %}
     {% assign y = post.date | date: '%Y' %}
     {% for y_c in temval %}
-    {% if y_c contains y %}
-      {% assign arr = y_c | split: "_" %}
-      <h3>{{ arr[0] }}({{ arr[1] }})</h3>
-    {% break %}
-    {% endif %}
+      {% if y_c contains y %}
+        {% assign arr = y_c | split: "_" %}
+        <h3>{{ arr[0] }}({{ arr[1] }})</h3>
+        {% break %}
+      {% endif %}
     {% endfor %}
   {% else %}
     {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
     {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
     {% if year != nyear %}
-    {% assign temval = year_count | split: "," %}
-    {% assign y = post.date | date: '%Y' %}
-    {% for y_c in temval %}
-    {% if y_c contains y %}
-      {% assign arr = y_c | split: "_" %}
-      <h3>{{ arr[0] }}({{ arr[1] }})</h3>
-    {% break %}
-    {% endif %}
-    {% endfor %}
+      {% assign temval = year_count | split: "," %}
+      {% assign y = post.date | date: '%Y' %}
+      {% for y_c in temval %}
+        {% if y_c contains y %}
+          {% assign arr = y_c | split: "_" %}
+          <h3>{{ arr[0] }}({{ arr[1] }})</h3>
+          {% break %}
+        {% endif %}
+      {% endfor %}
     {% endif %}
   {% endunless %}
   <li>{{ post.date | date:"%b" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
-
-
-
-
-<!--{% assign counterInit = 0 %}-->
-<!--{% for post in site.posts %}-->
-  <!--{% assign thisyear = post.date | date: "%Y" %}-->
-  <!--{% assign prevyear = post.previous.date | date: "%Y" %}-->
-  <!--{% assign counterInit = counterInit | plus: 1 %}-->
-  <!--{% if thisyear != prevyear %}-->
-    <!--{% break %}-->
-  <!--{% endif %}-->
-<!--{% endfor %}-->
-
-<!--{% assign counter = 0 %}-->
-<!--{% assign year_count = "" %}-->
-<!--{% for post in site.posts %}-->
-  <!--{% unless post.next %}-->
-    <!--<h3>{{ post.date | date: '%Y' }}({{ counterInit }})</h3>-->
-  <!--{% else %}-->
-  <!--{% assign thisyear = post.previous.date | date: "%Y" %}-->
-  <!--{% assign nextyear = post.date | date: "%Y" %}-->
-  <!--{% assign counter = counter | plus: 1 %}-->
-  <!--{% if thisyear != nextyear %}-->
-    <!--<h3>{{ post.date | date: '%Y' }}({{ counter }})</h3>-->
-    <!--{% capture new_val %}{{ post.date | date: '%Y' }}_{{ counter }},{% endcapture %}-->
-    <!--{% assign year_count = year_count | append: new_val %}-->
-    <!--{% assign counter = 0 %}-->
-  <!--{% endif %}-->
-  <!--{% endunless %}-->
-  <!--<li>{{ post.date | date:"%b" }} <a href="{{ post.url }}">{{ post.title }}</a></li>-->
-<!--{% endfor %}-->
-
-{{ year_count }}
-
-
