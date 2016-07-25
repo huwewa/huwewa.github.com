@@ -40,8 +40,9 @@ title: Archives
     {% assign y = post.date | date: '%Y' %}
     {% for y_c in temval %}
     {% if y_c contains y %}
-    <h3>{{ y_c }}</h3>
-      <% break %>
+      {% assign arr = y_c | split: "_" %}
+      <h3>{{ arr[0] }}({{ arr[1] }})</h3>
+    {% break %}
     {% endif %}
     {% endfor %}
     <h3>{{ post.date | date: '%Y' }}</h3>
