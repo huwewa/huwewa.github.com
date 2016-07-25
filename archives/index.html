@@ -31,6 +31,7 @@ title: Archives
 {% endfor %}
 
 {% assign counter = 0 %}
+{% assign year_count = "" %}
 {% for post in site.posts %}
   {% unless post.next %}
     <h3>{{ post.date | date: '%Y' }}({{ counterInit }})</h3>
@@ -40,8 +41,14 @@ title: Archives
   {% assign counter = counter | plus: 1 %}
   {% if thisyear != nextyear %}
     <h3>{{ post.date | date: '%Y' }}({{ counter }})</h3>
+    {% capture new_val %}{{ post.date | date: '%Y' }}{{ "_" }}{{ counter }}{{ "," }}{% endcapture %}
+    {% assign year_count = year_count %}
     {% assign counter = 0 %}
   {% endif %}
   {% endunless %}
   <li>{{ post.date | date:"%b" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
 {% endfor %}
+
+{{ year_count }}
+
+
