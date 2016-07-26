@@ -1,5 +1,12 @@
 ---
-image_path: /photo/apple-pie.jpg
-title: Apple Pie
-weight: 1
+layout: default
+images:
+  - image_path: /photo/apple-pie.jpg
+    title: Apple Pie
+  - image_path: /photo/apple-pie.jpg
+    title: Apple Pie
+  - image_path: /photo/apple-pie.jpg
+    title: Apple Pie
+  - image_path: /photo/apple-pie.jpg
+    title: Apple Pie
 ---
