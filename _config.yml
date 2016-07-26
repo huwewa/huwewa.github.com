@@ -45,5 +45,5 @@ paginate: 10
 paginate_path: "/page:num/"
 timezone: null
 
-#collections:
- #photo_gallery:
+collections:
+ photo_gallery:
