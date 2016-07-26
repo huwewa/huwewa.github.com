@@ -4,8 +4,7 @@ layout: default
 {% assign sorted_gallery = site.photo_gallery | sort: 'weight' %}
 <ul class="photo-gallery">
   {% for images in sorted_gallery %}
-    <h1 class="post-title">{{ images.title }}</h1>
-    {{ images.date | date: "%b %d %Y" }}
+    <h2 class="post-title">{{ images.date | date: "%b %d %Y" }} {{ images.title }}</h2>
     {% for image in images.images %}
       <li>
         <a href="{{ image.link }}">
