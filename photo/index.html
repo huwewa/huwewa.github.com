@@ -2,8 +2,16 @@
 layout: default
 ---
 
-<ul>
-{% for photo in site.photos %}
-    <li><a href="{{ site.baseurl }}{{ photo.url }}">{{ photo.title }}</a></li>
-{% endfor %}
-</ul>
+<div class="home">
+  <ul class="post-list">
+    {% for photo in site.photos %}
+      <li>
+        <span class="post-meta">{{ photo.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ photo.url | prepend: site.baseurl }}">{{ photo.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
