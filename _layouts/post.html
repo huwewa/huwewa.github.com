@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="post">
 
-  {% assign minutes = content | strip_html | strip_newlines | size | divided_by: 180 %}
+  {% assign minutes = content | number_of_words: "zh" | divided_by: 180 %}
   {% if minutes == 0 %}
   {% assign minutes = 1 %}
   {% endif %}
@@ -11,7 +11,7 @@ layout: default
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
-    <p class="post-meta small">{{ content | strip_html | strip_newlines | size }} words. {{ minutes }} minute read</p>
+    <p class="post-meta small">{{ content | number_of_words: "zh" }} words. {{ minutes }} minute read</p>
   </header>
 
   <article class="post-content">
