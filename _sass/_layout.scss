@@ -185,7 +185,16 @@
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    //font-size: $small-font-size;
+    //color: $grey-color;
+    font-size: 1.25rem;
+    color: $grey-color;
+}
+
+.post-meta-small {
+    //font-size: $small-font-size;
+    //color: $grey-color;
+    font-size: 1rem;
     color: $grey-color;
 }
 
