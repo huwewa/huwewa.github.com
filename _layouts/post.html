@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="post">
 
-  {% assign minutes = content | number_of_words | divided_by: 180 %}
+  {% assign minutes = page.content | number_of_words | divided_by: 180 %}
   {% if minutes == 0 %}
   {% assign minutes = 1 %}
   {% endif %}
