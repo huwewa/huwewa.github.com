@@ -4,7 +4,7 @@ layout: default
 
 Pagination in Collection working
 
-{% for c in site.photo_gallery %}
+{% for c in site.photos %}
 {% if c.title == page.title %}
   {% assign thisPost = c %}
   {% if forloop.index == 1 %}
@@ -20,7 +20,7 @@ Pagination in Collection working
 {% endif %}
 {% endfor %}
 
-{% for c in site.photo_gallery %}
+{% for c in site.photos %}
   {% if c.title == page.title %}
     {% assign prevflag = 0 %}
   {% endif %}
@@ -31,7 +31,7 @@ Pagination in Collection working
 {% endfor %}
 
 {% if nextflag == 1 %}
-  {% for c in site.photo_gallery %}
+  {% for c in site.photos %}
     {% if foundPost == 1 %}
       {% assign getNext = 1 %}
     {% endif %}

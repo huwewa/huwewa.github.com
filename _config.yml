@@ -46,6 +46,6 @@ paginate_path: "/page:num/"
 timezone: null
 
 collections:
- photo_gallery:
+ photos:
   output: true
   permalink: /:collection/:title/
