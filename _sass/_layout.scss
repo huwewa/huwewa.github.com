@@ -185,8 +185,15 @@
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    //font-size: $small-font-size;
+    font-size: 1.25rem;
     color: $grey-color;
+}
+
+post-meta-small {
+    font-size: 1rem;
+    color: $grey-color;
+    font-style: italic;
 }
 
 .post-link {
