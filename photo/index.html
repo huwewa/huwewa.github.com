@@ -4,7 +4,7 @@ layout: default
 
 <div class="home">
   <ul class="post-list">
-    {% for photo in site.photos %}
+    {% for photo in site.photos reversed %}
       <li>
         <span class="post-meta">{{ photo.date | date: "%b %-d, %Y" }}</span>
 
