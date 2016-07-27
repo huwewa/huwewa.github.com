@@ -12,6 +12,13 @@ title: Photos
         <h2>
           <a class="post-link" href="{{ photo.url | prepend: site.baseurl }}">{{ photo.title }}</a>
         </h2>
+        <ul class="photo-gallery">
+          {% for image in photo.images %}
+            <li>
+            <img src="{{ image.image_path }}" alt="{{ image.title}}"/>
+            </li>
+          {% endfor %}
+        </ul>
       </li>
     {% endfor %}
   </ul>
