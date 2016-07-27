@@ -2,8 +2,6 @@
 layout: default
 ---
 
-<a class="prev" href="/photo">Back Photos</a>
-
 {% for c in site.photos reversed %}
 {% if c.title == page.title %}
   {% assign thisPost = c %}
