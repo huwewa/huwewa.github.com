@@ -185,18 +185,8 @@
 }
 
 .post-meta {
-    //font-size: $small-font-size;
-    font-size: 1.25rem;
+    font-size: $small-font-size;
     color: $grey-color;
-}
-
-post-meta-small {
-  width: auto;
-  font-size: 0.8rem;
-  font-weight: 300;
-  margin: 0;
-  padding: .25em 0;
-  color: $grey-color;
 }
 
 .post-link {
