@@ -47,3 +47,5 @@ timezone: null
 
 collections:
  photo_gallery:
+  output: true
+  permalink: /:collection/:title/
