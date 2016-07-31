@@ -3,26 +3,74 @@ layout: default
 title: Photos
 ---
 
+<!--<h1>{{ page.title }}</h1>-->
+<!--<p>&nbsp;</p>-->
+
+<!--<div class="home">-->
+  <!--<ul class="post-list">-->
+    <!--{% for photo in site.photos reversed %}-->
+      <!--<li>-->
+        <!--<span class="post-meta">{{ photo.date | date: "%b %-d, %Y" }}</span>-->
+
+        <!--<h2>-->
+          <!--<a class="post-link" href="{{ photo.url | prepend: site.baseurl }}">{{ photo.title }}</a>-->
+        <!--</h2>-->
+        <!--<ul class="photo-gallery">-->
+          <!--{% for image in photo.images %}-->
+            <!--<li>-->
+            <!--<img src="{{ image.image_path }}" alt="{{ image.title}}"/>-->
+            <!--</li>-->
+          <!--{% endfor %}-->
+        <!--</ul>-->
+      <!--</li>-->
+    <!--{% endfor %}-->
+  <!--</ul>-->
+<!--</div>-->
+
+
 <h1>{{ page.title }}</h1>
 <p>&nbsp;</p>
 
-<div class="home">
-  <ul class="post-list">
-    {% for photo in site.photos reversed %}
-      <li>
-        <span class="post-meta">{{ photo.date | date: "%b %-d, %Y" }}</span>
+{% assign year_count = "" %}
+{% assign counter = 0 %}
+{% for post in site.photos reversed %}
+  {% assign thisyear = post.date | date: "%Y" %}
+  {% assign prevyear = post.previous.date | date: "%Y" %}
+  {% assign counter = counter | plus: 1 %}
+  {% if thisyear != prevyear %}
+    {% capture new_val %}{{ post.date | date: '%Y' }}_{{ counter }},{% endcapture %}
+    {% assign year_count = year_count | append: new_val %}
+    {% assign counter = 0 %}
+  {% endif %}
+{% endfor %}
 
-        <h2>
-          <a class="post-link" href="{{ photo.url | prepend: site.baseurl }}">{{ photo.title }}</a>
-        </h2>
-        <ul class="photo-gallery">
-          {% for image in photo.images %}
-            <li>
-            <img src="{{ image.image_path }}" alt="{{ image.title}}"/>
-            </li>
-          {% endfor %}
-        </ul>
-      </li>
+
+{% for post in site.photos reversed %}
+  {% unless post.next %}
+    {% assign temval = year_count | split: "," %}
+    {% assign y = post.date | date: '%Y' %}
+    {% for y_c in temval %}
+      {% if y_c contains y %}
+        {% assign arr = y_c | split: "_" %}
+        <h3>{{ arr[0] }}({{ arr[1] }})</h3>
+        {% break %}
+      {% endif %}
     {% endfor %}
-  </ul>
-</div>
+  {% else %}
+    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+    {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+    {% if year != nyear %}
+      {% assign temval = year_count | split: "," %}
+      {% assign y = post.date | date: '%Y' %}
+      {% for y_c in temval %}
+        {% if y_c contains y %}
+          {% assign arr = y_c | split: "_" %}
+          <h3>{{ arr[0] }}({{ arr[1] }})</h3>
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+  {% endunless %}
+  <!--<li>{{ post.date | date:"%b" }} <a href="{{ post.url }}">{{ post.title }}</a></li>-->
+  <li>{{ post.date | date:"%b" }} <a href="{{ photo.url | prepend: site.baseurl }}">{{ photo.title }}</a></li>
+{% endfor %}
