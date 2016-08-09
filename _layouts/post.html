@@ -19,30 +19,28 @@ layout: default
 
 </div>
 
-<form method="POST" action="https://api.staticman.net/v1/entry/huwewa/huwewa.github.com/master">
-  <!-- e.g. "2016-01-02-this-is-a-post" -->
-  <input name="options[title]" type="hidden" value="{{ page.title }}">
+<!--staticman-->
+<!--<form method="POST" action="https://api.staticman.net/v1/entry/huwewa/huwewa.github.com/master">-->
+  <!--[> e.g. "2016-01-02-this-is-a-post" <]-->
+  <!--<input name="options[title]" type="hidden" value="{{ page.title }}">-->
 
-  <input name="fields[name]" type="text">
-  <input name="fields[email]" type="email">
-  <textarea name="fields[comment]"></textarea>
+  <!--<input name="fields[name]" type="text">-->
+  <!--<input name="fields[email]" type="email">-->
+  <!--<textarea name="fields[comment]"></textarea>-->
 
-  <button type="submit">Go!</button>
-</form>
+  <!--<button type="submit">Go!</button>-->
+<!--</form>-->
 
- <!--多说评论框 start -->
-<!--<div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="wywon.com/{{page.url}}"></div>-->
- <!--多说评论框 end -->
- <!--多说公共JS代码 start (一个网页只需插入一次) -->
-<!--<script type="text/javascript">-->
-<!--var duoshuoQuery = {short_name:"wywon"};-->
-<!--(function() {-->
- <!--var ds = document.createElement('script');-->
- <!--ds.type = 'text/javascript';ds.async = true;-->
- <!--ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';-->
- <!--ds.charset = 'UTF-8';-->
- <!--(document.getElementsByTagName('head')[0]-->
-  <!--|| document.getElementsByTagName('body')[0]).appendChild(ds);-->
- <!--})();-->
-<!--</script>-->
- <!--多说公共JS代码 end -->
+<!--多说评论框-->
+<div class="ds-thread" data-thread-key="{{page.id}}" data-title="{{page.title}}" data-url="wywon.com/{{page.url}}"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"wywon"};
+(function() {
+ var ds = document.createElement('script');
+ ds.type = 'text/javascript';ds.async = true;
+ ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+ ds.charset = 'UTF-8';
+ (document.getElementsByTagName('head')[0]
+  || document.getElementsByTagName('body')[0]).appendChild(ds);
+ })();
+</script>
