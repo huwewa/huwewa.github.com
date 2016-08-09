@@ -49,3 +49,13 @@ collections:
  photos:
   output: true
   permalink: /:collection/:title/
+
+# staticman
+allowedFields: ['name','email','comment']
+branch: 'master'
+format: 'json'
+moderation: false
+path: _staticman/posts/{options.post-slug}
+requiredFields: ['name','comment']
+transforms:
+ email: 'md5'
