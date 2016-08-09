@@ -56,7 +56,7 @@ staticman:
  branch: 'master'
  format: 'json'
  moderation: false
- path: _staticman/posts/{options.post-slug}
+ path: _staticman/posts/{options.title}
  requiredFields: ['name','comment']
  transforms:
   email: 'md5'
