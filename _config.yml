@@ -48,7 +48,11 @@ timezone: null
 collections:
  photos:
   output: true
+  permalink: /:collection/:title/ 
+ quotes:
+  output: true
   permalink: /:collection/:title/
+
 
 # staticman
 staticman:
