@@ -9,7 +9,7 @@
 title: "碎碎念"
 #email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
-  思绪稍纵即逝，偶尔在这里停留
+  自律是解决人生问题最主要的工具，也是消除人生痛苦最重要的方法
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://wywon.com" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
