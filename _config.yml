@@ -52,6 +52,9 @@ collections:
  quotes:
   output: true
   permalink: /:collection/:year/:month/:day/:title.html
+ menu:
+  output: true
+  permalink: /:collection/:year/:month/:day/:title.html
 
 
 # staticman
