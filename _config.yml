@@ -47,8 +47,7 @@ timezone: null
 
 collections:
  photos:
-#  output: true
-  output: false
+  output: true
   permalink: /:collection/:year/:month/:day/:title.html
  quotes:
   output: true
