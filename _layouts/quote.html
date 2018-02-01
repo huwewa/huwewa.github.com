@@ -49,7 +49,8 @@ layout: default
     <div class="work">
         {% if prevPost.url %}
         <a class="prev" href="{{prevPost.url}}">
-            <span class="slide-wrap">&lt; {{prevPost.title}}</span>
+<!--             <span class="slide-wrap">&lt; {{prevPost.title}}</span> -->
+            <span class="slide-wrap">&lt; {{ prevPost.excerpt | strip_html | truncate: 50, '…'}}</span>
         </a>
         {% endif %}
         &nbsp;&nbsp;&nbsp;&nbsp;
