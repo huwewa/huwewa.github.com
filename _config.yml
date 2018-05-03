@@ -67,3 +67,5 @@ staticman:
  requiredFields: ['name','comment']
  transforms:
   email: 'md5'
+
+theme: jekyll-theme-tactile
