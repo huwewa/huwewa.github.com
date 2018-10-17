@@ -13,6 +13,9 @@ layout: default
         <h2>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h2>
+        
+        <span class="post-meta"><a href="{{post.url | prepend: site.baseurl}}">{{post.excerpt | strip_html | truncate: 20, '…'}}</a></span>
+        
       </li>
     {% endfor %}
   </ul>
