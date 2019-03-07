@@ -15,9 +15,9 @@ layout: default
 
       <li>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          <h2>
+          <h1>
             {{ post.title }}
-          </h2>
+          </h1>
         </a>
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp;
           <span class="post-categories">
@@ -31,6 +31,20 @@ layout: default
             {% endif %}
             {% for category in categories %}
             <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
+            {% unless forloop.last %}&nbsp;{% endunless %}
+            {% endfor %}
+          </span>
+          <span class="post-categories">
+            {% if post %}
+            {% assign tags = post.tags %}
+            {% else %}
+            {% assign tags = post.tags %}
+            {% endif %}
+            {% if tags %}
+            Tags:
+            {% endif %}
+            {% for tag in tags %}
+            <a href="{{site.baseurl}}/tags/#{{tag|slugize}}">{{tag}}</a>
             {% unless forloop.last %}&nbsp;{% endunless %}
             {% endfor %}
           </span>
