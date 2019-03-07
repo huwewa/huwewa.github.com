@@ -7,12 +7,35 @@ layout: default
 <!-- This loops through the paginated posts -->
   <ul class="post-list">
     {% for post in paginator.posts %}
+
+    {% assign minutes = post.content | strip_html | strip_newlines | size | divided_by: 500 %}
+    {% if minutes == 0 %}
+    {% assign minutes = 1 %}
+    {% endif %
+
       <li>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
           <h2>
             {{ post.title }}
           </h2>
         </a>
+
+        <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp;
+          <span class="post-categories">
+            {% if post %}
+            {% assign categories = post.categories %}
+            {% else %}
+            {% assign categories = page.categories %}
+            {% endif %}
+            {% if categories %}
+            Categories:
+            {% endif %}
+            {% for category in categories %}
+            <a href="{{site.baseurl}}/categories/#{{category|slugize}}">{{category}}</a>
+            {% unless forloop.last %}&nbsp;{% endunless %}
+            {% endfor %}
+          </span>
+          </p>
 
         <div class="post-content-preview">
           {{post.content | strip_html | truncate:200,'...'}} 
