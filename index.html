@@ -20,12 +20,12 @@ layout: default
           </h2>
         </a>
 
-        <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp;
+        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp;
           <span class="post-categories">
             {% if post %}
             {% assign categories = post.categories %}
             {% else %}
-            {% assign categories = page.categories %}
+            {% assign categories = post.categories %}
             {% endif %}
             {% if categories %}
             Categories:
