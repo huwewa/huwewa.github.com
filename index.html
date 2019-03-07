@@ -11,7 +11,7 @@ layout: default
     {% assign minutes = post.content | strip_html | strip_newlines | size | divided_by: 500 %}
     {% if minutes == 0 %}
     {% assign minutes = 1 %}
-    {% endif %
+    {% endif %}
 
       <li>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
