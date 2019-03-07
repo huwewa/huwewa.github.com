@@ -19,7 +19,6 @@ layout: default
             {{ post.title }}
           </h2>
         </a>
-
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp;
           <span class="post-categories">
             {% if post %}
@@ -43,8 +42,6 @@ layout: default
           <br/>
           <a href="{{ post.url}}">继续阅读全文 »</a>
         </div>
-        <br/>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
       </li>
     {% endfor %}
   </ul>
