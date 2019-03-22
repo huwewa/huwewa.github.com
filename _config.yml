@@ -56,16 +56,4 @@ collections:
   output: true
   permalink: /:collection/:year/:month/:day/:title.html
 
-
-# staticman
-staticman:
- allowedFields: ['name','email','comment']
- branch: 'master'
- format: 'json'
- moderation: false
- path: _staticman/posts/{options.title}
- requiredFields: ['name','comment']
- transforms:
-  email: 'md5'
-
 theme: jekyll-theme-tactile
