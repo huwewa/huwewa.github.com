@@ -1,12 +1,7 @@
 ---
 layout: default
 ---
-<style>
-  bg {
-    background-color: #f5f5d5;
-  }
-</style>
-<div class="post" id="bg">
+<div class="post">
 
   {% assign minutes = content | strip_html | strip_newlines | size | divided_by: 500 %}
   {% if minutes == 0 %}
