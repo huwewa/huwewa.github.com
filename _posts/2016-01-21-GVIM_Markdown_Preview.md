@@ -8,7 +8,7 @@ tags:
 
 - 安装[Markdown Preview Plus](https://github.com/volca/markdown-preview) Chrome扩展。
 
-- 安装后勾选`允许访问文件网址` ![]({{site.url}}/assets/20160121/markdown_preview.png)
+- 安装后勾选`允许访问文件网址` ![](/assets/20160121/markdown_preview.png)
 
 - 在`.vimrc`中设置预览快捷键
     
