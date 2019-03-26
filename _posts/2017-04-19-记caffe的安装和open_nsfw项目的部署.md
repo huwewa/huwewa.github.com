@@ -28,7 +28,7 @@ tags: IT技术
       Python-2.7.8.tar.xz
       setuptools-1.4.2.tar.gz
 {% endhighlight %}
-<blockquote>
+</blockquote>
 
 ### 查看系统版本
 
