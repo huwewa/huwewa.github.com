@@ -15,18 +15,18 @@ tags: IT技术
 
 <blockquote>
 {% highlight shell %}
-  ~ require_softwear/
-      Anaconda2-4.3.1-Linux-x86_64.sh
-      boost_1_63_0.tar.gz
-      caffe-master.zip
-      gflags-2.1.2.tar.gz
-      glog-0.3.4.tar.gz
-      lmdb-LMDB_0.9.18.tar.gz
-      open_nsfw_web.zip
-      opencv.tar.gz
-      protobuf-cpp-3.1.0.tar.gz
-      Python-2.7.8.tar.xz
-      setuptools-1.4.2.tar.gz
+~ require_softwear/
+    Anaconda2-4.3.1-Linux-x86_64.sh
+    boost_1_63_0.tar.gz
+    caffe-master.zip
+    gflags-2.1.2.tar.gz
+    glog-0.3.4.tar.gz
+    lmdb-LMDB_0.9.18.tar.gz
+    open_nsfw_web.zip
+    opencv.tar.gz
+    protobuf-cpp-3.1.0.tar.gz
+    Python-2.7.8.tar.xz
+    setuptools-1.4.2.tar.gz
 {% endhighlight %}
 </blockquote>
 
