@@ -13,7 +13,7 @@ tags: IT技术
 
 ### 所需文件列表
 
-```
+{% hightlight %}
   ~ require_softwear/
       Anaconda2-4.3.1-Linux-x86_64.sh
       boost_1_63_0.tar.gz
@@ -26,7 +26,7 @@ tags: IT技术
       protobuf-cpp-3.1.0.tar.gz
       Python-2.7.8.tar.xz
       setuptools-1.4.2.tar.gz
-```
+{% endhightlight %}
 
 ### 查看系统版本
 
@@ -55,11 +55,13 @@ tags: IT技术
 
 如果出现下面信息：
 
-> [root@host132 opt]# tar -xvf Python-2.7.8.tar.xz 
-> tar (child): xz：无法 exec: 没有那个文件或目录
-> tar (child): Error is not recoverable: exiting now
-> tar: Child returned status 2
-> tar: Error is not recoverable: exiting now
+{% hightlight shell %}
+[root@host132 opt]# tar -xvf Python-2.7.8.tar.xz 
+tar (child): xz：无法 exec: 没有那个文件或目录
+tar (child): Error is not recoverable: exiting now
+tar: Child returned status 2
+tar: Error is not recoverable: exiting now
+{% endhightlight %}
 
 说明需要安装 `xz`，安装 `xz` ：
 
