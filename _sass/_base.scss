@@ -136,6 +136,12 @@ blockquote {
     text-shadow: 0 1px white;
     overflow: auto;
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
 
     > :last-child {
         margin-bottom: 0;
