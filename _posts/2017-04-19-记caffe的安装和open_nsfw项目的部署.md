@@ -32,9 +32,12 @@ tags: IT技术
 
 ### 查看系统版本
 
-
-> [root@host132 ~]# cat /proc/version 
-> Linux version 2.6.32-504.12.2.el6.x86_64 (mockbuild@c6b9.bsys.dev.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-11) (GCC) ) #1 SMP Wed Mar 11 22:03:14 UTC 2015
+<blockquote>
+{% highlight shell %}
+[root@host132 ~]# cat /proc/version 
+Linux version 2.6.32-504.12.2.el6.x86_64 (mockbuild@c6b9.bsys.dev.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-11) (GCC) ) #1 SMP Wed Mar 11 22:03:14 UTC 2015
+{% endhighlight %}
+</blockquote>
 
 
 ### 版本要求
