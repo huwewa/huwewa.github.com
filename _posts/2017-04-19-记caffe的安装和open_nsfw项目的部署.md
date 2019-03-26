@@ -13,6 +13,7 @@ tags: IT技术
 
 ### 所需文件列表
 
+<blockquote>
 ```shell
 ~ require_softwear/
     Anaconda2-4.3.1-Linux-x86_64.sh
@@ -27,6 +28,7 @@ tags: IT技术
     Python-2.7.8.tar.xz
     setuptools-1.4.2.tar.gz
 ```    
+</blockquote>
 
 ### 查看系统版本
 
