@@ -13,7 +13,7 @@ tags: IT技术
 
 ### 所需文件列表
 
-{% highlight %}
+{% %}
   ~ require_softwear/
       Anaconda2-4.3.1-Linux-x86_64.sh
       boost_1_63_0.tar.gz
