@@ -161,7 +161,7 @@ include ld.so.conf.d/*.conf
 
 ###  安装`pip`
 
-> [root@host132 python]# curl  https://bootstrap.pypa.io/get-pip.py | python -
+> [root@host132 python]# curl  https://bootstrap.pypa.io/get-pip.py \| python -
 
 `pip`安装后路径为`/usr/local/Python2.7/bin/pip`
 
