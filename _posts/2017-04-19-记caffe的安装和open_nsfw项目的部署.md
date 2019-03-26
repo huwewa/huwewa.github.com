@@ -512,6 +512,7 @@ Traceback (most recent call last):
   File "<stdin>", line 1, in <module>
 ImportError: No module named caffe
 \>>> 
+
 </blockquote>
 
 提示没有`caffe`模块，是因为没有把`caffe`模块加入到环境变量。
