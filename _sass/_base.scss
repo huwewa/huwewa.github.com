@@ -156,6 +156,8 @@ code {
 pre {
     padding: 8px 12px;
     overflow-x: auto;
+    border-radius: 1em;
+    border: 0.3em solid #e0dfcc;
 
     > code {
         border: 0;
