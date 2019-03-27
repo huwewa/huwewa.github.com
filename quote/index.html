@@ -40,6 +40,7 @@ title: Quote
       {% for y_c in temval %}
         {% if y_c contains y %}
           {% assign arr = y_c | split: "_" %}
+          <br/>
           <h3>{{ arr[0] }}({{ arr[1] }})</h3>
           {% break %}
         {% endif %}

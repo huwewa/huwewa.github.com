@@ -3,31 +3,6 @@ layout: default
 title:
 ---
 
-<!--<h1>{{ page.title }}</h1>-->
-<!--<p>&nbsp;</p>-->
-
-<!--<div class="home">-->
-  <!--<ul class="post-list">-->
-    <!--{% for photo in site.photos reversed %}-->
-      <!--<li>-->
-        <!--<span class="post-meta">{{ photo.date | date: "%b %-d, %Y" }}</span>-->
-
-        <!--<h2>-->
-          <!--<a class="post-link" href="{{ photo.url | prepend: site.baseurl }}">{{ photo.title }}</a>-->
-        <!--</h2>-->
-        <!--<ul class="photo-gallery">-->
-          <!--{% for image in photo.images %}-->
-            <!--<li>-->
-            <!--<img src="{{ image.image_path }}" alt="{{ image.title}}"/>-->
-            <!--</li>-->
-          <!--{% endfor %}-->
-        <!--</ul>-->
-      <!--</li>-->
-    <!--{% endfor %}-->
-  <!--</ul>-->
-<!--</div>-->
-
-
 <h1>{{ page.title }}</h1>
 <p>&nbsp;</p>
 
@@ -65,6 +40,7 @@ title:
       {% for y_c in temval %}
         {% if y_c contains y %}
           {% assign arr = y_c | split: "_" %}
+          <br/>
           <h3>{{ arr[0] }}({{ arr[1] }})</h3>
           {% break %}
         {% endif %}
