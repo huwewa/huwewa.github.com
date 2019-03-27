@@ -136,12 +136,10 @@ blockquote {
     text-shadow: 0 1px white;
     overflow: auto;
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
-    white-space: pre-wrap;
-    word-wrap: break-word;
     margin-block-start: 1em;
     margin-block-end: 1em;
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
+    margin-inline-start: 25px;
+    margin-inline-end: 25px;
 
     > :last-child {
         margin-bottom: 0;
@@ -158,7 +156,14 @@ code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
     border-radius: 3px;
-    background-color: #ffc0cb;
+    color: #828282;
+    font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+p {
+    > code {
+        background: #ffc0cb;
+    }
 }
 
 code {
