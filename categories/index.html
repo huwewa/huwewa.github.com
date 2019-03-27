@@ -14,7 +14,7 @@ title: Categories
 {% assign sortedcategories = categories | split:' ' | sort %}
 
 {% for categorie in sortedcategories %}
-<h3 id="{{ categorie }}">{{ categorie }}({{ site.categories[categorie].size }})</h3>
+<h3 id="{{ categorie }}"><a href="{{site.baseurl}}/categories/#{{categorie|slugize}}">{{ categorie }}({{ site.categories[categorie].size }})</a></h3>
   <ul>
   {% for post in site.categories[categorie] %}
     <li>
