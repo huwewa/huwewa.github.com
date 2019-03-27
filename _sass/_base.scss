@@ -160,7 +160,7 @@ code {
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
 }
 
-p {
+p, h1, h2, h3, h4, h5, h6 {
     > code {
         background: #ffc0cb;
     }
