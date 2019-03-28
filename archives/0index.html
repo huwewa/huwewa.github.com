@@ -28,8 +28,7 @@ permalink: /archive/
         {% for y_c in temval %}
           {% if y_c contains y %}
             {% assign arr = y_c | split: "_" %}
-            <t><a href="/">{{ arr[0] }}</a><sup> {{ arr[1] }}</sup></t>&nbsp;&nbsp;&nbsp;
-            <h3>{{ arr[0] }}({{ arr[1] }})</h3>
+            <t><a href="/archive/#{{ arr[0] }}({{ arr[1] }})">{{ arr[0] }}</a><sup> {{ arr[1] }}</sup></t>&nbsp;&nbsp;&nbsp;
             {% break %}
           {% endif %}
         {% endfor %}
@@ -42,7 +41,7 @@ permalink: /archive/
           {% for y_c in temval %}
             {% if y_c contains y %}
               {% assign arr = y_c | split: "_" %}
-              <t><a href="/">{{ arr[0] }}</a><sup> {{ arr[1] }}</sup></t>&nbsp;&nbsp;&nbsp;
+              <t><a href="/archive/#{{ arr[0] }}({{ arr[1] }})">{{ arr[0] }}</a><sup> {{ arr[1] }}</sup></t>&nbsp;&nbsp;&nbsp;
               {% break %}
             {% endif %}
           {% endfor %}
