@@ -4,15 +4,24 @@ title: Categories
 permalink: /category/
 ---
 
-<h1>{{ page.title }}</h1>
-<p>&nbsp;</p>
-
 {% capture categories %}
   {% for categorie in site.categories %}
     {{ categorie[0] }}
   {% endfor %}
 {% endcapture %}
 {% assign sortedcategories = categories | split:' ' | sort %}
+
+<h1>{{ page.title }}</h1>
+
+<div>
+    <span class="tag_arch_category">
+    {% for categorie in sortedcategories %}
+    <t><a href="/category/#{{ categorie | slugize }}">{{ arr[0] }}</a><sup> {{ arr[1] }}</sup></t>&nbsp;&nbsp;&nbsp;
+    {% endfor %           
+    </span>
+
+<p>&nbsp;</p>
+</div>
 
 {% for categorie in sortedcategories %}
 <h3 id="{{ categorie }}">{{ categorie }}({{ site.categories[categorie].size }})</h3>
