@@ -61,7 +61,7 @@ permalink: /archive/
     {% for y_c in temval %}
       {% if y_c contains y %}
         {% assign arr = y_c | split: "_" %}
-        <h3>{{ arr[0] }}({{ arr[1] }})</h3>
+        <h3 id="{{ arr[0] }}">{{ arr[0] }}({{ arr[1] }})</h3>
         {% break %}
       {% endif %}
     {% endfor %}
@@ -75,7 +75,7 @@ permalink: /archive/
         {% if y_c contains y %}
           {% assign arr = y_c | split: "_" %}
           <br/>
-          <h3>{{ arr[0] }}({{ arr[1] }})</h3>
+          <h3 id="{{ arr[0] }}">{{ arr[0] }}({{ arr[1] }})</h3>
           {% break %}
         {% endif %}
       {% endfor %}
