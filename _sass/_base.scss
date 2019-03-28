@@ -84,13 +84,19 @@ ul, ol {
 }
 
 li {
+    list-style-type: square;
+
     > ul,
     > ol {
          margin-bottom: 0;
     }
 }
 
-
+no {
+    > li {
+        list-style: none;
+    }
+}
 
 /**
  * Headings
