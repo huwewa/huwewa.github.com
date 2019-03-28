@@ -269,3 +269,13 @@ div.page-content li {
         text-decoration: underline;
     }
 }
+
+span.tag_arch_category t {
+    padding: 0 5px;
+    background-color: #9e9d9d;
+    border-radius: 4px;
+    /* color: #fff; */
+    font-size: 110%;
+    transition: 0.3s ease;
+    padding-top: 6px;
+}
