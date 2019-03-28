@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-<div class="post">
+<div class="post" id="content">
 
   {% assign minutes = content | strip_html | strip_newlines | size | divided_by: 500 %}
   {% if minutes == 0 %}

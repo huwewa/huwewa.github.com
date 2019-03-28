@@ -243,3 +243,15 @@ pre {
         }
     }
 }
+
+/**
+ * content
+ */
+ #content h1, h2, h3 {
+    margin: 0.4em 0 0.2em 0;
+    padding: 0 0 0.2em 0;
+    color: #000000;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    border-bottom: 1px solid #d3d3d3;
+}
