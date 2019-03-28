@@ -14,11 +14,13 @@ layout: default
     {% endif %}
     <no>
       <li>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-          <h2>
-            {{ post.title }}
-          </h2>
-        </a>
+        <no>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+            <h2>
+              {{ post.title }}
+            </h2>
+          </a>
+        </no>
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp;
         </p>
 
