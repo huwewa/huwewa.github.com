@@ -256,3 +256,9 @@ pre {
     letter-spacing: -0.03em;
     border-bottom: 1px solid #d3d3d3;
 }
+
+div.page-content li {
+    > a {
+        text-decoration: underline;
+    }
+}
