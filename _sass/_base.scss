@@ -265,6 +265,12 @@ pre {
     border-bottom: 1px solid #d3d3d3;
 }
 
+#content #alpha p {
+    margin-top: 1em;
+    line-height: 180%;
+    margin-left: 0.8em;
+}
+
 div.page-content li {
     > a {
         text-decoration: underline;
@@ -273,6 +279,7 @@ div.page-content li {
 
 t {
     > a {
+        color: #000000;
         &:visited {
             color: #000000;
         }
