@@ -270,10 +270,18 @@ pre {
     border-bottom: 1px solid #d3d3d3;
 }
 
-#content #alpha p {
+#alpha p {
     margin-top: 1em;
     line-height: 180%;
     margin-left: 0.8em;
+}
+
+#alpha a {
+    text-decoration: underline;
+    color: #223472;
+    &:hover {
+        color: #D03500;
+    }
 }
 
 div.page-content li {
@@ -311,6 +319,11 @@ a.next {
 }
 
 a.prev {
+    color: #556677;
+    text-decoration: underline;
+}
+
+a.previous {
     color: #556677;
     text-decoration: underline;
 }
