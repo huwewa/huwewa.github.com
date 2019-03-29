@@ -25,12 +25,12 @@ layout: default
         </p>
 
         <div class="post-content-preview">
+          <p>
           {{post.content | strip_html | truncate:200,'...'}} 
-          <br/>
-          <br/>
+          </p>
+          <p>
           <a href="{{ post.url}}">继续阅读全文 »</a>
-          <br/>
-          <br/>
+          </p>
         </div>
       </li>
     </no>
