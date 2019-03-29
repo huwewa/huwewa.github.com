@@ -71,6 +71,13 @@ $on-laptop:        800px;
   font-size: 16px;
   color: #111111;
   line-height: 180%;
+
+    > a {
+        color: #008000;
+        &:hover {
+            color: #112233;
+        }
+    }
 }
 .post-content-preview:hover {
   color: #111111;
