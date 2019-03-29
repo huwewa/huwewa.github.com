@@ -55,7 +55,7 @@ ul, ol, dl, figure,
  * Images
  */
 img {
-    max-width: 100%;
+    max-width: 90%;
     vertical-align: middle;
     border-radius: 1em;
     border: 0.3em solid #e0dfcc;
@@ -310,7 +310,12 @@ a.next {
     text-decoration: underline;
 }
 
-a.pre {
+a.prev {
+    color: #556677;
+    text-decoration: underline;
+}
+
+#content .post-categories a {
     color: #556677;
     text-decoration: underline;
 }
