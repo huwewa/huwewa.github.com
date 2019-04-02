@@ -32,7 +32,7 @@ layout: default
       {% else %}
       {% assign tags = page.tags %}
       {% endif %}
-      {% if tags %}
+      {% if tags.size > 0 %}
       Tags:
       {% endif %}
       {% for tag in tags %}
