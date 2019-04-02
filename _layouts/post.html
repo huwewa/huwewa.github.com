@@ -25,6 +25,20 @@ layout: default
       {% unless forloop.last %}&nbsp;{% endunless %}
       {% endfor %}
     </span>
+    <span class="post-tags">
+      {% if post %}
+      {% assign tags = post.tags %}
+      {% else %}
+      {% assign tags = page.tags %}
+      {% endif %}
+      {% if tags %}
+      Tags:
+      {% endif %}
+      {% for tag in tags %}
+      <a href="{{site.baseurl}}/tag/#{{tag|slugize}}">{{tag}}</a>
+      {% unless forloop.last %}&nbsp;{% endunless %}
+      {% endfor %}
+    </span>   
     </p>
   </header>
 
