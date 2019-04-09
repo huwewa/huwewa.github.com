@@ -22,7 +22,7 @@ layout: default
           </a>
         </no>
         <!-- <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp; -->
-        <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}
+        <p class="post-meta">
           {% assign m = post.date | date: "%-m" %}
           {{ post.date | date: "%Y" }}年
           {% case m %}
