@@ -1,6 +1,9 @@
 <section class="comments">
 
-  site.data.comments.[page.slug] - {{ site.data.comments.[page.slug] }}
+  <p>site.data.comments.[page.slug] - {{ site.data.comments.[page.slug] }} </p>
+
+
+  <p>page.slug = {{ page.slug }}</p>
 
   {% if site.data.comments.[page.slug] %}
     Comments : {{ site.data.comments.[page.slug].size }}
