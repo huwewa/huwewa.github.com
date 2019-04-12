@@ -57,3 +57,11 @@ collections:
   permalink: /:collection/:year/:month/:day/:title.html
 
 theme: jekyll-theme-tactile
+
+# Staticman comments
+staticmanUrl: https://dev.staticman.net/v3/entry/github/huwewa/huwewa.github.com/master/comments
+
+# reCAPTCHA keys
+reCaptcha:
+  siteKey: "6LcdzZ0UAAAAAIvQIwQC2KStTr_YRJnYsPobt0MU"
+  secret: "6LcdzZ0UAAAAAAdH2RgrJ8-rysHMwBAOxel64v1_"

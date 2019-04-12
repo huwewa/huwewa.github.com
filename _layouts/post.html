@@ -45,8 +45,11 @@ layout: default
 
   <article class="post-content" id="alpha">
     {{ content }}
+
+    {% if page.comments == true %}
+      {% include comments.html %}
+    {% endif %}
+
   </article>
 
 </div>
-
-{% include comment-staticman.html %}
