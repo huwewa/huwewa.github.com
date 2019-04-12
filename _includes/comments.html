@@ -9,12 +9,14 @@
 
   <p>site.data.comments.km_run.size {{ site.data.comments.km_run.size }} 条评论！</p>
 
-  <p>site.data.comments[page.slug].size {{ site.data.comments[page.slug].size }} 条评论！</p>
 
   <p>page.slug {{ page.slug }} ！</p>
 
   {% assign cinx = 0 %}
   <p>cinx {{ cinx }} ！</p>
+
+  {% assign tt = 'km_run' %}
+  <p>site.data.comments.{{tt}}.size {{ site.data.comments.{{tt}}.size }} 条评论！</p>
 
   {% if site.data.comments[cinx] %}
 
