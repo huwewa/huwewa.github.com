@@ -18,7 +18,7 @@
   {% assign tt = 'km_run' %}
   <p>site.data.comments.[tt].size {{ site.data.comments.[tt].size }} 条评论！</p>
 
-  {% if site.data.comments.[tt] %}
+  {% if site.data.comments.[tt].size > 0 %}
 
     <!-- Existing comments -->
     <hr>
