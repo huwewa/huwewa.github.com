@@ -1,6 +1,6 @@
 <section class="comments">
 
-  <p>site.data.comments[page.slug] - {{ site.data.comments[page.slug] | inspect}} </p>
+  <p>site.data.comments[post_slug] - {{ site.data.comments[post_slug]}} </p>
 
   <p>site.data.comments.香港中文大学校长：如何不负此生 - {{ site.data.comments.香港中文大学校长：如何不负此生 }} </p>
 
@@ -9,11 +9,11 @@
   <p>site.data.comments[0] - {{ site.data.comments[0] }} </p>
   
 
-  <p>page.slug = {{ page.slug }}</p>
+  <p>post_slug = {{ post_slug }}</p>
 
   {% if site.data.comments %}
 
-    Comments : {{ site.data.comments[page.slug].size }}
+    Comments : {{ site.data.comments[post_slug].size }}
   {% endif %}
 
   <!-- New comment form -->
