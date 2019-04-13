@@ -5,7 +5,7 @@ layout: default
 
   <!-- {% capture post_slug %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify }}{% endcapture %} -->
 
-  {% capture post_slug %}{{ page.layout }}-{{ page.date | date: %Y }}-{{ page.date | date: %m }}-{{ page.date | date: %d }}-{{ page.date | date: %H }}-{{ page.date | date: %M }}{% endcapture %}
+  {% capture post_slug %}{{ page.layout }}-{{ page.date | date: "%Y" }}-{{ page.date | date: "%m" }}-{{ page.date | date: "%d" }}-{{ page.date | date: "%H" }}-{{ page.date | date: "%M" }}{% endcapture %}
 
   {% assign minutes = content | strip_html | strip_newlines | size | divided_by: 500 %}
   {% if minutes == 0 %}
