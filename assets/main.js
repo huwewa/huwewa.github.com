@@ -4,9 +4,7 @@
     var $comments = $('.js-comments');
   
     $('.js-form').submit(function () {
-
-
-
+      console.log('--- come here submit ---')  
       var form = this;
   
       $(form).addClass('form--loading');
@@ -36,7 +34,7 @@
   
     function showModal(title, message) {
       console.log('--- come here ---')  
-      
+
       $('.js-modal-title').text(title);
       $('.js-modal-text').html(message);
       $('body').addClass('show-modal');
