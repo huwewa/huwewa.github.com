@@ -3,7 +3,7 @@ layout: default
 ---
 <div class="post" id="content">
 
-  {% capture post_slug %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.title | slugify }}{% endcapture %}
+  {% capture post_slug %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.id | slugify }}{% endcapture %}
 
   {% assign minutes = content | strip_html | strip_newlines | size | divided_by: 500 %}
   {% if minutes == 0 %}
