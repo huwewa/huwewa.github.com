@@ -4,6 +4,9 @@
     var $comments = $('.js-comments');
   
     $('.js-form').submit(function () {
+
+      console.log('--- come here ---')  
+
       var form = this;
   
       $(form).addClass('form--loading');
