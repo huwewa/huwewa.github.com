@@ -11,7 +11,7 @@
 
   <p>post_slug = {{ post_slug }}</p>
 
-  {% if site.data.comments %}
+  {% if site.data.comments[post_slug] %}
 
     Comments : {{ site.data.comments[post_slug].size }}
   {% endif %}
