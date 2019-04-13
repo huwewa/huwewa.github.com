@@ -63,6 +63,6 @@ staticmanUrl: https://dev.staticman.net/v3/entry/github/huwewa/huwewa.github.com
 
 # reCAPTCHA keys
 reCaptcha:
-  enabled: true
+  enabled: false
   siteKey: "6Lc3A54UAAAAAFOQlwTym_WjL8dvD0aYJyiwnyxo"
   secret: "6Lc3A54UAAAAAMwwiRbbig4JfvHxKlHLNlIsSeIQ"

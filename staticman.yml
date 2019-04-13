@@ -77,6 +77,6 @@ comments:
     email: md5
 
   reCaptcha:
-    enabled: true
+    enabled: false
     siteKey: "6Lc3A54UAAAAAFOQlwTym_WjL8dvD0aYJyiwnyxo"
     secret: "6Lc3A54UAAAAAMwwiRbbig4JfvHxKlHLNlIsSeIQ"
