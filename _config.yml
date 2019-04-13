@@ -62,7 +62,7 @@ theme: jekyll-theme-tactile
 staticmanUrl: https://dev.staticman.net/v3/entry/github/huwewa/huwewa.github.com/master/comments
 
 # reCAPTCHA keys
-  reCaptcha:
-    enabled: true
-    siteKey: "6Lc3A54UAAAAAFOQlwTym_WjL8dvD0aYJyiwnyxo"
-    secret: "6Lc3A54UAAAAAMwwiRbbig4JfvHxKlHLNlIsSeIQ"
+reCaptcha:
+  enabled: true
+  siteKey: "6Lc3A54UAAAAAFOQlwTym_WjL8dvD0aYJyiwnyxo"
+  secret: "6Lc3A54UAAAAAMwwiRbbig4JfvHxKlHLNlIsSeIQ"
