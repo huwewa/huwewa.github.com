@@ -1,27 +1,9 @@
 <section class="comments">
-
-  <p>site.data.comments[post_slug] - {{ site.data.comments[post_slug]}} </p>
-
-  <p>site.data.comments.香港中文大学校长：如何不负此生 - {{ site.data.comments.香港中文大学校长：如何不负此生 }} </p>
-
-  <p>site.data.comments.香港中文大学校长：如何不负此生.size - {{ site.data.comments.香港中文大学校长：如何不负此生.size }} </p>
-
-  <p>site.data.comments[0] - {{ site.data.comments[0] }} </p>
-  
-
-  <p>post_slug = {{ post_slug }}</p>
-
-  {% if site.data.comments[post_slug] %}
-
-    Comments : {{ site.data.comments[post_slug].size }}
-  {% endif %}
-
-
   {% if site.data.comments[post_slug] %}
     <!-- Existing comments -->
     <hr>
     <div class="comments__existing">
-    <h2>Questions</h2>
+    <h2>留言</h2>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
     {% assign comments_by_date = comments | sort: 'date' | reverse %}
     <!-- List main comments in reverse date order, newest first. List replies in date order, oldest first. -->
