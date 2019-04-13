@@ -5,7 +5,7 @@
   
     $('.js-form').submit(function () {
 
-      console.log('--- come here ---')  
+
 
       var form = this;
   
@@ -35,6 +35,8 @@
     });
   
     function showModal(title, message) {
+      console.log('--- come here ---')  
+      
       $('.js-modal-title').text(title);
       $('.js-modal-text').html(message);
       $('body').addClass('show-modal');
