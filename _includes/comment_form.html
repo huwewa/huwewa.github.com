@@ -9,6 +9,7 @@
     <div class="textfield">
       <label for="comment-form-message"><h2>我要发表看法 <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">(取消发表)</a></small></h2>
         <textarea class="textfield__input" name="fields[message]" type="text" id="comment-form-message"></textarea>
+        支持 Markdown
       </label>
     </div>
     </fieldset>
@@ -25,14 +26,6 @@
       <div class="textfield">
         <label for="comment-form-email">E-mail
           <input class="textfield__input" name="fields[email]" type="email" id="comment-form-email" placeholder="Your email (optional, used only to send comments.)"/>
-      </div>
-    </fieldset>
-  
-    <fieldset>
-      <div class="notify-me">
-        <label for="comment-form-reply">
-          <input type="checkbox" id="comment-form-reply" name="options[subscribe]" value="email">
-        Send me an email when someone comments.
       </div>
     </fieldset>
   
