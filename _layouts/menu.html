@@ -10,6 +10,8 @@ layout: default
   {% assign comments_status = "open" %}
 {% endif %}
 
+{% capture post_date %}{{ page.date | date: "%Y" }}年{{ page.date | date: "%m" }}月{{ page.date | date: "%d" }}日{% endcapture %}
+
 {% for c in site.menu reversed %}
 {% if c.title == page.title %}
   {% assign thisPost = c %}
@@ -76,6 +78,8 @@ layout: default
 
 <article class="post-content" id="alpha">
   {{ content }}
+
+  {% include post-info.html %}
 
   {% if page.comments == true %}
     {% include comments.html %}
