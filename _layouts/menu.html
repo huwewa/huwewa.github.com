@@ -8,7 +8,7 @@ layout: default
   {% capture comments_status %}{{ page.comments_status }}{% endcapture %}
 {% else %}
   {% assign comments_status = "open" %}
-{% endif %
+{% endif %}
 
 {% for c in site.menu reversed %}
 {% if c.title == page.title %}
