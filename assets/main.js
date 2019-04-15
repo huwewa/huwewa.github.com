@@ -6,9 +6,11 @@
     $('.js-form').submit(function () {
       var form = this;
   
-      $(form).addClass('form--loading');
+      $(form).addClass('disabled');
 
-      $("#comment-form-submit").html('发表中...');
+      $("#comment-form-submit").html(
+        '<svg class="icon spin"><use xlink:href="/assets/icons/icons.svg#icon-loading"></use></svg>发表中...'
+        );
   
       $.ajax({
         type: $(this).attr('method'),
@@ -24,7 +26,7 @@
           showAlert(
             '<strong>谢谢！</strong>您的留言 <a href="https://github.com/huwewa/huwewa.github.com/pulls">正在处理中</a>。 处理完毕后将会显示。'
           );
-          $(form).removeClass('form--loading');
+          $(form).removeClass('disabled');
         },
         error: function (err) {
           console.log(err);
@@ -36,7 +38,7 @@
           showAlert(
             '<strong>抱歉，您的评论提交时出错了！</strong>请确保已填必填字段，然后重试！'
           );
-          $(form).removeClass('form--loading');
+          $(form).removeClass('disabled');
         }
       });
       return false;
