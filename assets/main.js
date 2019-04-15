@@ -7,6 +7,8 @@
       var form = this;
   
       $(form).addClass('form--loading');
+
+      $("#comment-form-submit").html('发表中...');
   
       $.ajax({
         type: $(this).attr('method'),
@@ -14,13 +16,26 @@
         data: $(this).serialize(),
         contentType: 'application/x-www-form-urlencoded',
         success: function (data) {
-  //        showModal('Comment submitted', 'Thanks! Refresh your browser in a minute to see your comment.');
-          showModal('Comment submitted', '谢谢! 您的留言 <a href="https://github.com/huwewa/huwewa.github.io/pulls">正在处理中</a>。 处理完毕后将会显示。');
+          // showModal('Comment submitted', '谢谢! 您的留言 <a href="https://github.com/huwewa/huwewa.github.com/pulls">正在处理中</a>。 处理完毕后将会显示。');
+          $("#comment-form-submit").html('已发表').addClass("btn--disabled");
+          $("#comment-form .js-notice")
+            .removeClass("danger")
+            .addClass("success");          
+          showAlert(
+            '<strong>谢谢！</strong>您的留言 <a href="https://github.com/huwewa/huwewa.github.com/pulls">正在处理中</a>。 处理完毕后将会显示。'
+          );
           $(form).removeClass('form--loading');
         },
         error: function (err) {
           console.log(err);
-          showModal('Error', '抱歉，您的评论提交时出错了！');
+          // showModal('Error', '抱歉，您的评论提交时出错了！');
+          $("#comment-form-submit").html("发表");
+          $("#comment-form .js-notice")
+            .removeClass("success")
+            .addClass("danger");          
+          showAlert(
+            '<strong>抱歉，您的评论提交时出错了！</strong>请确保已填必填字段，然后重试！'
+          );
           $(form).removeClass('form--loading');
         }
       });
@@ -31,11 +46,15 @@
       $('body').removeClass('show-modal');
     });
   
-    function showModal(title, message) {
-      $('.js-modal-title').text(title);
-      $('.js-modal-text').html(message);
-      $('body').addClass('show-modal');
-    }
+    // function showModal(title, message) {
+    //   $('.js-modal-title').text(title);
+    //   $('.js-modal-text').html(message);
+    //   $('body').addClass('show-modal');
+    // }
+    function showAlert(message) {
+      $("#comment-form .js-notice").removeClass("hidden");
+      $("#comment-form .js-notice-text").html(message);
+    }  
   })(jQuery);
   
   // Staticman comment replies, from https://github.com/mmistakes/made-mistakes-jekyll
