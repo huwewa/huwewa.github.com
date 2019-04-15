@@ -551,23 +551,23 @@ a.youtube_link:link, a.youtube_link:visited {
     box-shadow: 0.25em 0.25em 0 #000;
   
     &.info {
-      color: $info-color;
-      box-shadow: 0.25em 0.25em 0 $info-color;
+      color: #1c7cd6;
+      box-shadow: 0.25em 0.25em 0 #1c7cd6;
     }
   
     &.warning {
-      color: $warning-color;
-      box-shadow: 0.25em 0.25em 0 $warning-color;
+      color: #92710c;
+      box-shadow: 0.25em 0.25em 0 #92710c;
     }
   
     &.danger {
-      color: $danger-color;
-      box-shadow: 0.25em 0.25em 0 $danger-color;
+      color: #b11313;
+      box-shadow: 0.25em 0.25em 0 #b11313;
     }
   
     &.success {
-      color: $success-color;
-      box-shadow: 0.25em 0.25em 0 $success-color;
+      color: #1a882c;
+      box-shadow: 0.25em 0.25em 0 #1a882c;
     }
 }
   
@@ -577,7 +577,7 @@ a.youtube_link:link, a.youtube_link:visited {
       margin-bottom: 1.25em;
       padding-bottom: 0.25em;
       border-bottom: 2px solid;
-      font-family: $monospace-font;
+      font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
       font-size: ms(0);
     }
 }
