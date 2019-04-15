@@ -10,7 +10,7 @@
 
       $("#comment-form-submit").html(
         '<svg class="icon spin"><use xlink:href="/icons/icon.svg#icon-loading"></use></svg>发表中•••'
-        );
+        ).addClass("btn--disabled");
   
       $.ajax({
         type: $(this).attr('method'),
@@ -31,7 +31,7 @@
         error: function (err) {
           console.log(err);
           // showModal('Error', '抱歉，您的评论提交时出错了！');
-          $("#comment-form-submit").html("发表");
+          $("#comment-form-submit").html("发表").removeClass("btn--disabled");
           $("#comment-form .js-notice")
             .removeClass("success")
             .addClass("danger");          
