@@ -546,3 +546,22 @@ a.youtube_link:link, a.youtube_link:visited {
     -webkit-box-shadow: 0.25em 0.25em 0 #000;
     box-shadow: 0.25em 0.25em 0 #000;
 }
+
+.asset-footer h3 {
+    color: #556677;
+}
+
+.asset-footer {
+    font-weight: normal;
+    margin-top: 2em;
+    color: #556677;
+    padding: 0.3em 0.5em;
+    margin: 0 0 1em 0;
+    border-bottom: none;
+    border-radius: 1em;
+    box-shadow: inset 0px 1px 0px 0px #eeeeee;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #aad2f0), color-stop(1, #8bc1ed) );
+    background-color: #aad2f0;
+    border: 1px solid #dcdcdc;
+    text-shadow: 1px 1px 0px #eeeeee;
+}

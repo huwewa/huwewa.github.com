@@ -2,6 +2,14 @@
 layout: default
 ---
 
+<!-- comments -->
+{% capture post_slug %}{{ page.layout }}-{{ page.date | date: "%Y" }}-{{ page.date | date: "%m" }}-{{ page.date | date: "%d" }}-{{ page.date | date: "%H" }}-{{ page.date | date: "%M" }}{% endcapture %}
+{% if page.comments_status %}
+  {% capture comments_status %}{{ page.comments_status }}{% endcapture %}
+{% else %}
+  {% assign comments_status = "open" %}
+{% endif %}
+
 {% for c in site.photos reversed %}
 {% if c.title == page.title %}
   {% assign thisPost = c %}
@@ -68,4 +76,8 @@ layout: default
 
 <article class="post-content" id="alpha">
   {{ content }}
+
+  {% if page.comments == true %}
+    {% include comments.html %}
+  {% endif %}  
  </article>

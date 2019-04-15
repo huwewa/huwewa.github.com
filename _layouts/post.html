@@ -12,6 +12,8 @@ layout: default
     {% assign comments_status = "open" %}
   {% endif %}
 
+  {% capture post_date %}{{ page.date | date: "%Y" }}年{{ page.date | date: "%m" }}月{{ page.date | date: "%d" }}日{% endcapture %}
+
   {% assign minutes = content | strip_html | strip_newlines | size | divided_by: 500 %}
   {% if minutes == 0 %}
   {% assign minutes = 1 %}
@@ -54,6 +56,8 @@ layout: default
 
   <article class="post-content" id="alpha">
     {{ content }}
+
+    {% include post-info.html %}
 
     {% if page.comments == true %}
       {% include comments.html %}
