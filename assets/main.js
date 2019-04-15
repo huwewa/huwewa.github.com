@@ -9,7 +9,7 @@
       $(form).addClass('disabled');
 
       $("#comment-form-submit").html(
-        '<svg class="icon spin"><use xlink:href="/icons/icon.svg#icon-loading"></use></svg>发表中•••'
+        '发表中•••'
         ).addClass("btn--disabled");
   
       $.ajax({
