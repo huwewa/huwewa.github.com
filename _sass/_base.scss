@@ -386,7 +386,7 @@ fieldset {
     padding: 0;
 }
 .textfield {
-    width: 420px;
+    // width: 420px;
     max-width: 100%;
     padding: 0.5rem 0;
 }
@@ -519,4 +519,13 @@ a.youtube_link:link, a.youtube_link:visited {
 }
 .modal-title {
     margin-bottom: 0px;
+}
+
+
+#respond .textfield__input {
+    font-size: 17px;
+    border: 1px solid #d3d3d3;
+    background-color: #f5f4df;
+    padding: 0.5em;
+    width: 90%;
 }
