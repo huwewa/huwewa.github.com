@@ -8,7 +8,7 @@
     <fieldset>
     <div class="textfield">
       <label for="comment-form-message"><h2>我要发表看法 <small><a rel="nofollow" id="cancel-comment-reply-link" href="{{ page.url | absolute_url }}#respond" style="display:none;">(取消)</a></small></h2>
-        <textarea class="textfield__input" name="fields[message]" type="text" id="comment-form-message" rows="10"></textarea>
+        <textarea class="textfield__input" name="fields[message]" type="text" id="comment-form-message" rows="10" required spellcheck="true"></textarea>
         <p><text style="color:gray">支持 Markdown</text></p>
       </label>
     </div>
@@ -18,7 +18,7 @@
       <div class="textfield">
         <label for="comment-form-name">
           <p>你的大名：</p>
-          <input class="textfield__input" name="fields[name]" type="text" id="comment-form-name" placeholder=""/>
+          <input class="textfield__input" name="fields[name]" type="text" id="comment-form-name" placeholder="" required spellcheck="false"/>
         </label>
       </div>
     </fieldset>
