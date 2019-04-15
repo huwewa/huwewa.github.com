@@ -645,6 +645,12 @@ a.youtube_link:link, a.youtube_link:visited {
    margin-bottom: 0;
 }
 
+.hidden, .is--hidden {
+   display: none!important;
+   visibility: hidden!important;
+   opacity: 0;
+}
+
 /* disabled */
 .btn--disabled {
   box-shadow: none;
