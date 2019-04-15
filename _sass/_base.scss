@@ -543,10 +543,11 @@ a.youtube_link:link, a.youtube_link:visited {
 .notice {
     position: relative;
     min-height: 1em;
-    @include margin-top(1);
-    @include margin-bottom(1);
+    margin-top: 1.45rem;
+    margin-bottom: 1.45rem;
     padding: 1em 1.5em 1.5em;
     border: 2px solid;
+    -webkit-box-shadow: 0.25em 0.25em 0 #000;
     box-shadow: 0.25em 0.25em 0 #000;
   
     &.info {
