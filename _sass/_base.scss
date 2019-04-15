@@ -696,24 +696,6 @@ a.youtube_link:link, a.youtube_link:visited {
       animation: spin 2s infinite linear;
     }
   
-    $icons: (
-       (email, #000),
-       (facebook, $facebook-color),
-       (flickr, $flickr-color),
-       (github, $github-color),
-       (googleplus, $google-plus-color),
-       (instagram, $instagram-color),
-       (rss, $rss-color),
-       (twitter, $twitter-color),
-       (youtube, $youtube-color)
-    );
-  
-    @each $icon, $color in $icons {
-      &--#{$icon} {
-        fill: $color;
-      }
-    }
-  
     /* icon--arrow-left */
     &--arrow-left {
       transform: matrix(-1, 0, 0, 1, 0, 0);
