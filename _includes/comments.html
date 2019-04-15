@@ -21,8 +21,19 @@
     </div>    
   {% endif %}
 
-  <!-- New comment form -->
-  <div id="respond" class="comment__new">
-    {% include comment_form.html %}
-  </div>
+  {% if comments_status == 'close' %}
+    {% if site.data.comments[post_slug] %}
+      <div class="notice">
+        <h4>评论已关闭</h4>
+        <p>如果您对本页内容有疑问，请随时<a href="mailto:bj4312@163.com">与我联系</a>.</p>
+      </div>
+    {% endif %}
+  {% else %}
+    <!-- New comment form -->
+    <div id="respond" class="comment__new">
+        {% include comment_form.html %}
+    </div>
+  {% endif %}
+
+
 </section>

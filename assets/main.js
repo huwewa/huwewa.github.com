@@ -4,7 +4,6 @@
     var $comments = $('.js-comments');
   
     $('.js-form').submit(function () {
-      console.log('--- come here submit ---')  
       var form = this;
   
       $(form).addClass('form--loading');
@@ -16,12 +15,12 @@
         contentType: 'application/x-www-form-urlencoded',
         success: function (data) {
   //        showModal('Comment submitted', 'Thanks! Refresh your browser in a minute to see your comment.');
-          showModal('Comment submitted', 'Thanks! Your comment is <a href="https://github.com/huwewa/huwewa.github.io/pulls">pending</a>. It will appear when approved.');
+          showModal('Comment submitted', '谢谢! 您的留言 <a href="https://github.com/huwewa/huwewa.github.io/pulls">正在处理中</a>。 处理完毕后将会显示。');
           $(form).removeClass('form--loading');
         },
         error: function (err) {
           console.log(err);
-          showModal('Error', 'Sorry, there was an error when your comment was submitted!');
+          showModal('Error', '抱歉，您的评论提交时出错了！');
           $(form).removeClass('form--loading');
         }
       });
@@ -33,8 +32,6 @@
     });
   
     function showModal(title, message) {
-      console.log('--- come here ---')  
-
       $('.js-modal-title').text(title);
       $('.js-modal-text').html(message);
       $('body').addClass('show-modal');
