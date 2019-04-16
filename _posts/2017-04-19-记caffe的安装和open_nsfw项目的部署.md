@@ -4,6 +4,8 @@ title: 记caffe的安装和open_nsfw项目的部署
 date: 2017-04-19 15:06:46
 categories: IT技术
 tags: IT技术
+comments: true
+comments_status: open
 ---
 
 
