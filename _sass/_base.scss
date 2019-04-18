@@ -444,7 +444,7 @@ a.youtube_link:link, a.youtube_link:visited {
     color: $grey-color;
 }
 .comment__date {
-    font-size: $small-font-size; 
+    font-size: 15px; 
 }
 .comment__body {
     font-size: $comment-font-size; 
@@ -453,7 +453,7 @@ a.youtube_link:link, a.youtube_link:visited {
 .comment__meta {
     text-align: left;
     color: $grey-color;
-    font-size: $small-font-size;
+    font-size: 15px;
 }
 .comments__existing {
     padding: 8px 0px 0px 0px;
@@ -468,7 +468,13 @@ a.youtube_link:link, a.youtube_link:visited {
 }
 .comment__reply-link {
   color: $grey-color;
-  font-size: $small-font-size;
+  font-size: 15px;
+}
+
+a#cancel-comment-reply-link {
+    font-size: 22px;
+    color: #607d8b;
+    text-decoration: none;
 }
 
 ////// pop-up modal window for comments //////
