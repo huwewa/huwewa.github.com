@@ -19,7 +19,7 @@ layout: default
   {% assign minutes = 1 %}
   {% endif %}
 
-  {% for c in paginator.posts reversed %}
+  {% for c in site.posts reversed %}
   {% if c.title == page.title %}
     {% assign thisPost = c %}
     {% if forloop.index == 1 %}
@@ -35,7 +35,7 @@ layout: default
   {% endif %}
   {% endfor %}
 
-  {% for c in paginator.posts reversed %}
+  {% for c in site.posts reversed %}
     {% if c.title == page.title %}
       {% assign prevflag = 0 %}
     {% endif %}
@@ -46,7 +46,7 @@ layout: default
   {% endfor %}
 
   {% if nextflag == 1 %}
-    {% for c in paginator.posts reversed %}
+    {% for c in site.posts reversed %}
       {% if foundPost == 1 %}
         {% assign getNext = 1 %}
       {% endif %}
