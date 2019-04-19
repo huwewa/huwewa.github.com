@@ -1,7 +1,7 @@
 <section class="comments">
   {% if site.data.comments[post_slug] %}
     <!-- Existing comments -->
-    <hr>
+    <!-- <hr> -->
     <div class="comments__existing">
     <h2>留言（{{ site.data.comments[post_slug].size }}条）</h2>
     {% assign comments = site.data.comments[post_slug] | where_exp: "item", "item.replying_to == ''" %}
