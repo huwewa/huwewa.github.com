@@ -53,24 +53,6 @@ layout: default
   {% endfor %}
 {% endif %}
 
-<div id="post-nav" class="clearfix nav-slide">
-    <div class="work">
-        {% if prevPost.url %}
-        <a class="prev" href="{{prevPost.url}}">
-<!--             <span class="slide-wrap">&lt; {{prevPost.title}}</span> -->
-            <span class="slide-wrap">&lt; {{ prevPost.excerpt | strip_html | truncate: 10, '…'}}</span>
-        </a>
-        {% endif %}
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        {% if nextPost.url %}
-        <a class="next" href="{{nextPost.url}}">
-<!--        <span class="slide-wrap">{{nextPost.title}} &gt;</span> -->
-            <span class="slide-wrap">{{ nextPost.excerpt | strip_html | truncate: 10, '…'}} &gt;</span>
-        </a>
-        {% endif %}
-    </div>
-</div>
-
 <header class="post-header">
     <!-- <h1 class="post-title">{{ page.title }}</h1> -->
     <!-- <h1 class="post-title"></h1> -->
@@ -79,6 +61,24 @@ layout: default
 
 <article class="post-content" id="alpha">
   {{ content }}
+
+  <div id="post-nav" class="clearfix nav-slide">
+      <div class="work">
+          {% if prevPost.url %}
+          <a class="prev" href="{{prevPost.url}}">
+  <!--             <span class="slide-wrap">&lt; {{prevPost.title}}</span> -->
+              <span class="slide-wrap">&lt; {{ prevPost.excerpt | strip_html | truncate: 10, '…'}}</span>
+          </a>
+          {% endif %}
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          {% if nextPost.url %}
+          <a class="next" href="{{nextPost.url}}">
+  <!--        <span class="slide-wrap">{{nextPost.title}} &gt;</span> -->
+              <span class="slide-wrap">{{ nextPost.excerpt | strip_html | truncate: 10, '…'}} &gt;</span>
+          </a>
+          {% endif %}
+      </div>
+  </div>
 
   {% if page.comments == true %}
     {% include comments.html %}

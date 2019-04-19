@@ -19,14 +19,57 @@ layout: default
   {% assign minutes = 1 %}
   {% endif %}
 
+  {% for c in site.post reversed %}
+  {% if c.title == page.title %}
+    {% assign thisPost = c %}
+    {% if forloop.index == 1 %}
+      {% assign prevflag = 0 %}
+      {% assign nextflag = 1 %}
+    {% elsif forloop.index == forloop.length %}
+      {% assign prevflag = 1 %}
+      {% assign nextflag = 0 %}
+    {% else %}
+      {% assign prevflag = 1 %}
+      {% assign nextflag = 1 %}
+    {% endif %}
+  {% endif %}
+  {% endfor %}
+
+  {% for c in site.post reversed %}
+    {% if c.title == page.title %}
+      {% assign prevflag = 0 %}
+    {% endif %}
+    {% if prevflag == 1 %}
+      {% assign prevPost = c %}
+      {% assign page.previous = c %}
+    {% endif %}
+  {% endfor %}
+
+  {% if nextflag == 1 %}
+    {% for c in site.post reversed %}
+      {% if foundPost == 1 %}
+        {% assign getNext = 1 %}
+      {% endif %}
+      {% if c.title == page.title %}
+        {% assign foundPost = 1 %}
+      {% endif %}
+      {% if getNext == 1%}
+        {% assign nextPost = c %}
+        {% assign page.next = c %}
+        {% assign foundPost = 0 %}
+        {% assign getNext = 0 %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+
   <header class="post-header">
     <h1 class="post-title">{{ page.title }}</h1>
     <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp;
     <span class="post-categories">
       {% if post %}
-      {% assign categories = post.categories %}
+        {% assign categories = post.categories %}
       {% else %}
-      {% assign categories = page.categories %}
+        {% assign categories = page.categories %}
       {% endif %}
       {% if categories.size > 0 %}
       分类:
@@ -39,9 +82,9 @@ layout: default
     &nbsp;&nbsp;
     <span class="post-tags">
       {% if post %}
-      {% assign tags = post.tags %}
+        {% assign tags = post.tags %}
       {% else %}
-      {% assign tags = page.tags %}
+        {% assign tags = page.tags %}
       {% endif %}
       {% if tags.size > 0 %}
       标签:
@@ -58,6 +101,22 @@ layout: default
     {{ content }}
 
     {% include post-info.html %}
+
+    <div id="post-nav" class="clearfix nav-slide">
+        <div class="work">
+            {% if prevPost.url %}
+            <a class="prev" href="{{prevPost.url}}">
+                <span class="slide-wrap">&lt; 上一篇：{{prevPost.title}}</span>
+            </a>
+            {% endif %}
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            {% if nextPost.url %}
+            <a class="next" href="{{nextPost.url}}">
+                <span class="slide-wrap">下一篇：{{nextPost.title}} &gt;</span>
+            </a>
+            {% endif %}
+        </div>
+    </div>
 
     {% if page.comments == true %}
       {% include comments.html %}
