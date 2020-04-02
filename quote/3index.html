@@ -7,9 +7,5 @@ permalink: /quote/
 <h1>{{ page.title }}</h1>
 <p>&nbsp;</p>
 
-<div>
-  <span id="quote" style="font-size: 2rem;"></span>
-  <span id="quote2" style="font-size: 2rem;"></span>
-</div>
-
-<script src="./quote.js"></script>
+{% assign random = site.time | date: "%s%N" | modulo: site.quotes.size %}
+<h1>{{ site.posts[random].content }}</h1>>
