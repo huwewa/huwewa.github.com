@@ -4,8 +4,7 @@ title: 摘录
 permalink: /quote/
 ---
 
-<h1>{{ page.title }}</h1>
 <p>&nbsp;</p>
 
-{% assign random = site.time | date: "%s%N" | modulo: site.quotes.size %}
-<h1>{{ site.quotes[random].content }}</h1>>
+{% assign random = "now" | date: "%N" | modulo: site.quotes.size %}
+<h1>{{ site.quotes[random].content }}</h1>
