@@ -6,5 +6,9 @@ permalink: /quote/
 
 <p>&nbsp;</p>
 
-{% assign random = "now" | date: "%N" | modulo: site.quotes.size %}
-<h1>{{ site.quotes[random].content }}</h1>
+{% assign min = 0 %}
+{% assign max = site.quotes.size %}
+{% assign diff = max | minus: min %}
+{% assign randomNumber = site.time | date: "%s" | modulo: diff | plus: min %}
+
+<h1>{{ site.quotes[randomNumber].content }}</h1>
