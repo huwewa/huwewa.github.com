@@ -42,7 +42,8 @@ function randomSentence() {
 	{% endfor %}}
 
 
-    document.getElementById('quote').innerHTML = quoteArr[Math.floor(Math.random() * quoteArr.length)];
+    // document.getElementById('quote').innerHTML = quoteArr[Math.floor(Math.random() * quoteArr.length)];
+    document.getElementById('quote').innerHTML = "Hello World";
 }
   
 randomSentence();
