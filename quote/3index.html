@@ -4,6 +4,27 @@ title: 摘录
 permalink: /quote/
 ---
 
+<script type="text/javascript">
+
+    function generateRandomPosts()
+    {
+        $.getJSON("/quotes.json", function(data) {
+            console.log("[quotes.json loaded for random posts]");
+
+var posts = data;
+var postsCount = data.length;
+var randomIndex = Math.floor(Math.random() * postsCount);
+var divRandomPosts = $("#random_posts");
+var postContent = posts[randomIndex].content;
+divRandomPosts.append(postContent);
+
+    $(document).ready(function() {
+        generateRandomPosts();
+    });
+
+</script>
+
+
 <p>&nbsp;</p>
 
 {% assign min = 0 %}
@@ -11,4 +32,4 @@ permalink: /quote/
 {% assign diff = max | minus: min %}
 {% assign randomNumber = site.time | date: "%s" | modulo: diff | plus: min %}
 
-<h1>{{ site.quotes[randomNumber].content }}</h1>
+<div id="random_posts"></div>
