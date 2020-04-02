@@ -10,4 +10,27 @@
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
   <link rel="shortcut icon" type="image/png" href="/favicon.png">
+
+<script type="text/javascript">
+
+    function generateRandomPosts()
+    {
+        $.getJSON("/quotes.json", function(data) {
+            console.log("[quotes.json loaded for random posts]");
+
+var posts = data;
+var postsCount = data.length;
+var randomIndex = Math.floor(Math.random() * postsCount);
+var divRandomPosts = $("#random_posts");
+var postContent = posts[randomIndex].content;
+divRandomPosts.append(”hello”);
+});
+}
+
+    $(document).ready(function() {
+        generateRandomPosts();
+    });
+
+</script>
+
 </head>
