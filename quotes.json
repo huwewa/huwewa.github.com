@@ -1,0 +1,12 @@
+---
+---
+[
+    {% for post in site.quotes %}
+    {
+      "content"    : "{{ post.content }}",
+      "href"     : "{{ post.url }}"
+      }
+    }
+    {% unless forloop.last %},{% endunless %}
+    {% endfor %}
+]
