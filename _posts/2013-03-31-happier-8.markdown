@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 幸福课系列:[8]理论与实践"
+title: 幸福课系列:[8]理论与实践
 date: 2013-03-31 00:58
 comments: true
 categories: 我的生活
