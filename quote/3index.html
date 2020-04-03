@@ -5,8 +5,5 @@ permalink: /quote/
 ---
 
 {% assign quotes = site.quotes | sample: 1 %}
-{% for quote in quotes %}
-  <div id="random-quote">{{ quote.content }}</div>
-{% endfor %}
-
-</body>
+{% assign quote = quotes[0] %}
+<div id="random-quote">{{ quote.content }}</div>
