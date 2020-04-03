@@ -1,10 +1,10 @@
 ---
 ---
 [
-    {% for post in site.quotes %}
+    {% for quote in site.quotes %}
     {
-      "content"    : "{{ post.content }}",
-      "href"     : "{{ post.url }}"
+      "content"    : "{{ quote.content }}",
+      "href"     : "{{ quote.url }}"
       }
     }
     {% unless forloop.last %},{% endunless %}

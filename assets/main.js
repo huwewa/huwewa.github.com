@@ -159,3 +159,30 @@
       return document.getElementById( id );
     }
   };
+
+// 随机摘录
+var quoteData;
+var xhrPosts = new XMLHttpRequest();
+xhrPosts.open('GET', '/quotes.json', true);
+xhrPosts.onreadystatechange = function () {
+  if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
+    quoteData = JSON.parse(xhrPosts.responseText);
+    randomQuotes(relatedPosts(quoteData));
+  }
+}
+xhrPosts.send(null);
+
+function randomPosts(quotes) {
+  var used = [];
+  var counter = 0;
+  var html = '';
+  while (counter < 1) {
+    var index = Math.floor(Math.random() * quotes.length);
+    if (used.indexOf(index) == '-1') {
+      html += '<h2>' + quotes[index].content + '</h2>';
+      used.push(index);
+      counter++;
+    }
+  }
+  document.querySelector('#random-quote').insertAdjacentHTML('beforeend', html);
+}
