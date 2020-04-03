@@ -4,9 +4,9 @@ title: 摘录
 permalink: /quote/
 ---
 
-{% for quote in site.quotes | sample: 1 %}
+{% assign quotes = site.quotes | sample: 1 %}
+{% for quote in quotes %}
   <div id="random-quote">{{ quote.content }}</div>
-{% unless forloop.last %}quote_split{% endunless %}
 {% endfor %}
 
 </body>
