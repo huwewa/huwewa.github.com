@@ -171,7 +171,7 @@ xhrPosts.onreadystatechange = function () {
     randomQuotes(quoteData);
   }
 }
-xhrPosts.send(null);
+// xhrPosts.send(null);
 //
 function randomQuotes(quotes) {
   var used = [];
@@ -185,7 +185,7 @@ function randomQuotes(quotes) {
       counter++;
     }
   }
-  document.querySelector('#random-quote').insertAdjacentHTML('beforeend', html);
+  // document.querySelector('#random-quote').insertAdjacentHTML('beforeend', html);
 }
 
 //最新文章
