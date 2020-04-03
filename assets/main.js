@@ -176,8 +176,9 @@ xhrPosts.send(null);
 function randomQuotes(quotes) {
   if (quotes.length > 0){
     var index = Math.floor(Math.random() * quotes.length);
-    document.querySelector('#random-quote').insertAdjacentHTML('beforeend', "<div>" + quotes[index] + "</div>");
+    document.querySelector('#random-quote').innerHTML = quotes[index];
   }
+  document.querySelector('#random-quote-test').innerHTML = "Hello World";
 }
 
 // 相关文章
