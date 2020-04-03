@@ -182,6 +182,7 @@ function pickQuote() {
 //
 window.onload = function() {
   pickQuote();
+  pickPost();
 }
 
 function randomQuotes(quotes) {
