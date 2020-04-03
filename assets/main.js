@@ -163,6 +163,7 @@
 // 随机摘录
 function pickQuote() {
   var elements = document.querySelector('#random-quote');
+  console.log(elements);
   if (elements.length) {
     var quoteData;
     var xhrPosts = new XMLHttpRequest();
