@@ -196,6 +196,7 @@ function randomQuotes(quotes) {
 function pickPost() {
   var elements = document.querySelector('#random-posts');
   if (elements !== null) {
+    console.log("pick post data");
     var postData;
     var xhrPosts = new XMLHttpRequest();
     xhrPosts.onreadystatechange = function () {
