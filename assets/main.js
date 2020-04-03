@@ -170,6 +170,8 @@ function pickQuote() {
       quoteData = data.split("quote_split");
       randomQuotes(quoteData);      
     }); 
+    console.log(quoteData);
+    console.log("end get data");
   }
 }
 
