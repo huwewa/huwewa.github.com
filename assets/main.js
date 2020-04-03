@@ -167,11 +167,12 @@ xhrPosts.open('GET', '/quotes.data', true);
 xhrPosts.onreadystatechange = function () {
   if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
     quoteData = xhrPosts.responseText;
-    randomQuotes(quoteData.split("quote_split"));
+    quoteData = quoteData.split("quote_split");
+    randomQuotes(quoteData);
   }
 }
 xhrPosts.send(null);
-
+//
 function randomQuotes(quotes) {
   var used = [];
   var counter = 0;
