@@ -201,6 +201,7 @@ function pickPost() {
     xhrPosts.onreadystatechange = function () {
       if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
         postData = JSON.parse(xhrPosts.responseText);
+        // TODO page is undefined
         randomPosts(relatedPosts(page.tags, page.category));
       }
     }
