@@ -164,23 +164,18 @@
 function pickQuote() {
   var elements = document.querySelector('#random-quote');
   if (elements !== null) {
-    console.log("start get data");
     var quoteData;
 
     var xhrPosts = new XMLHttpRequest();
     xhrPosts.onreadystatechange = function() {
-        console.log("geting data");
         if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
             quoteData = xhrPosts.responseText;
-            console.log(quoteData);
             quoteData = quoteData.split("quote_split");
             randomQuotes(quoteData);                 
         }
     }
     xhrPosts.open('GET', '/quotes.json', true);
     xhrPosts.send(null);
-    console.log("end get data");
-    console.log(quoteData);
   }
 }
 
@@ -197,16 +192,24 @@ function randomQuotes(quotes) {
 }
 
 // 相关文章
-var postData;
-var xhrPosts = new XMLHttpRequest();
-xhrPosts.open('GET', '/posts.json', true);
-xhrPosts.onreadystatechange = function () {
-  if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
-    // postData = JSON.parse(xhrPosts.responseText);
-    // randomPosts(relatedPosts(page.tags, page.category));
-  }
+function pickPost() {
+  var elements = document.querySelector('#random-posts');
+  if (elements !== null) {
+    var postData;
+    var xhrPosts = new XMLHttpRequest();
+    xhrPosts.onreadystatechange = function () {
+      console.log("get post data");
+      if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
+        postData = JSON.parse(xhrPosts.responseText);
+        console.log("parse post data");
+        // randomPosts(relatedPosts(page.tags, page.category));
+      }
+    }
+    xhrPosts.open('GET', '/posts.json', true);
+    xhrPosts.send(null);
+    console.log("end post data");
+  }  
 }
-xhrPosts.send(null);
 
 function relatedPosts(tags, cat) {
   var posts = [];
