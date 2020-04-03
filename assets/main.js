@@ -166,7 +166,7 @@ function pickQuote() {
   if (elements !== null) {
     console.log("start get data");
     var quoteData;
-    $.getJson('/quotes.json', function(data) {
+    $.get('/quotes.json', function(data) {
       console.log("geting data");
       quoteData = data.split("quote_split");
       randomQuotes(quoteData);      
