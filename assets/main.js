@@ -168,11 +168,12 @@ function pickQuote() {
     var quoteData;
     $.get('/quotes.json', function(data) {
       console.log("geting data");
+      console.log(data);
       quoteData = data.split("quote_split");
       randomQuotes(quoteData);      
     }); 
-    console.log(quoteData);
     console.log("end get data");
+    console.log(quoteData);
   }
 }
 
