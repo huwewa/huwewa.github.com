@@ -185,7 +185,7 @@ function randomQuotes(quotes) {
       counter++;
     }
   }
-  // document.querySelector('#random-quote').insertAdjacentHTML('beforeend', html);
+  document.querySelector('#random-quote').insertAdjacentHTML('beforeend', html);
 }
 
 //最新文章
