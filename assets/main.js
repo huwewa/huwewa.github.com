@@ -186,8 +186,8 @@ var xhrPosts = new XMLHttpRequest();
 xhrPosts.open('GET', '/posts.json', true);
 xhrPosts.onreadystatechange = function () {
   if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
-    postData = JSON.parse(xhrPosts.responseText);
-    randomPosts(relatedPosts(page.tags, page.category));
+    // postData = JSON.parse(xhrPosts.responseText);
+    // randomPosts(relatedPosts(page.tags, page.category));
   }
 }
 xhrPosts.send(null);
