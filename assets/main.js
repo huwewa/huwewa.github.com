@@ -174,6 +174,8 @@ xhrPosts.onreadystatechange = function () {
 xhrPosts.send(null);
 //
 function randomQuotes(quotes) {
+  console.log("hello world");
+  console.log(quotes);
   if (quotes.length > 0){
     var index = Math.floor(Math.random() * quotes.length);
     document.querySelector('#random-quote').innerHTML = quotes[index];
