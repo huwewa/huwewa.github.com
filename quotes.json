@@ -3,7 +3,7 @@
 [
     {% for quote in site.quotes %}
     {
-      "content"    : "{{ quote.content }}",
+      "content"    : "{{ quote.content | strip_html }}",
       "href"     : "{{ quote.url }}"
       }
     }
