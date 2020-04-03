@@ -204,7 +204,7 @@ function pickPost() {
       if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
         postData = JSON.parse(xhrPosts.responseText);
         console.log("parse post data");
-        // randomPosts(relatedPosts(page.tags, page.category));
+        randomPosts(relatedPosts(page.tags, page.category));
       }
     }
     xhrPosts.open('GET', '/posts.json', true);
