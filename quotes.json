@@ -1,12 +1,6 @@
 ---
 ---
-[
-    {% for quote in site.quotes %}
-    {
-      "content"    : "{{ quote.content | strip_html }}",
-      "href"     : "{{ quote.url }}"
-      }
-    }
-    {% unless forloop.last %},{% endunless %}
-    {% endfor %}
-]
+{% for quote in site.quotes %}
+  {{ quote.content }}
+{% unless forloop.last %}quote_split{% endunless %}
+{% endfor %}
