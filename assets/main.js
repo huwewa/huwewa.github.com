@@ -171,7 +171,7 @@ xhrPosts.onreadystatechange = function () {
     randomQuotes(quoteData);
   }
 }
-// xhrPosts.send(null);
+xhrPosts.send(null);
 //
 function randomQuotes(quotes) {
   var used = [];

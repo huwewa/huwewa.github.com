@@ -4,6 +4,5 @@ title: 摘录
 permalink: /quote/
 ---
 
-{% assign quotes = site.quotes | sample: 1 %}
-{% assign quote = quotes[0] %}
+{% assign quote = site.quotes | sample %}
 <div id="random-quote">{{ quote.content }}</div>
