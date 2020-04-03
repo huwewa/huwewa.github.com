@@ -164,9 +164,10 @@
 function pickQuote() {
   var elements = document.querySelector('#random-quote');
   if (elements !== null) {
-    console.log("get data");
+    console.log("start get data");
     var quoteData;
-    $.get('/quotes.json', function(data) {
+    $.getJson('/quotes.json', function(data) {
+      console.log("geting data");
       quoteData = data.split("quote_split");
       randomQuotes(quoteData);      
     }); 
