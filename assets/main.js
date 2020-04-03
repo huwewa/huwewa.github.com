@@ -161,18 +161,25 @@
   };
 
 // 随机摘录
-var quoteData;
-var xhrPosts = new XMLHttpRequest();
-xhrPosts.open('GET', '/quotes.json', true);
-xhrPosts.onreadystatechange = function () {
-  if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
-    quoteData = xhrPosts.responseText;
-    quoteData = quoteData.split("quote_split");
-    randomQuotes(quoteData);
+function pickQuote() {
+  var quoteData;
+  var xhrPosts = new XMLHttpRequest();
+  xhrPosts.open('GET', '/quotes.json', true);
+  xhrPosts.onreadystatechange = function () {
+    if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
+      quoteData = xhrPosts.responseText;
+      quoteData = quoteData.split("quote_split");
+      randomQuotes(quoteData);
+    }
   }
+  xhrPosts.send(null);
 }
-xhrPosts.send(null);
+
 //
+window.onload = function() {
+  pickQuote();
+}
+
 function randomQuotes(quotes) {
   console.log("hello world");
   console.log(quotes);
