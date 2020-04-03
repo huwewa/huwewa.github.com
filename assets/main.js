@@ -168,7 +168,6 @@ function pickQuote() {
     var quoteData;
 
     var xhrPosts = new XMLHttpRequest();
-    xhrPosts.open('GET', '/quotes.json', true);
     xhrPosts.onreadystatechange = function() {
         console.log("geting data");
         if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
@@ -178,6 +177,8 @@ function pickQuote() {
             randomQuotes(quoteData);                 
         }
     }
+    xhrPosts.open('GET', '/quotes.json', true);
+    xhrPosts.send(null);
     console.log("end get data");
     console.log(quoteData);
   }
