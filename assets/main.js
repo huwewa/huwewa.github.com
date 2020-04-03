@@ -182,7 +182,7 @@ function pickQuote() {
 //
 window.onload = function() {
   pickQuote();
-  pickPost();
+  // pickPost();
 }
 
 function randomQuotes(quotes) {
@@ -196,20 +196,16 @@ function randomQuotes(quotes) {
 function pickPost() {
   var elements = document.querySelector('#random-posts');
   if (elements !== null) {
-    console.log("pick post data");
     var postData;
     var xhrPosts = new XMLHttpRequest();
     xhrPosts.onreadystatechange = function () {
-      console.log("get post data");
       if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
         postData = JSON.parse(xhrPosts.responseText);
-        console.log("parse post data");
         randomPosts(relatedPosts(page.tags, page.category));
       }
     }
     xhrPosts.open('GET', '/posts.json', true);
     xhrPosts.send(null);
-    console.log("end post data");
   }  
 }
 
