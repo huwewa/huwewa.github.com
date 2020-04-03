@@ -164,7 +164,7 @@
 function pickQuote() {
   var elements = document.querySelector('#random-quote');
   console.log(elements);
-  if (elements.length) {
+  if (elements !== null) {
     var quoteData;
     var xhrPosts = new XMLHttpRequest();
     xhrPosts.open('GET', '/quotes.json', true);
