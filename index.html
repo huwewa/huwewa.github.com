@@ -6,7 +6,8 @@ layout: default
 
 <!-- This loops through the paginated posts -->
   <ul class="post-list">
-    {% for post in paginator.posts %}
+    <!-- {% for post in paginator.posts %} -->
+    {% for post in site.posts limit:1 %}
 
     {% assign minutes = post.content | strip_html | strip_newlines | size | divided_by: 500 %}
     {% if minutes == 0 %}
@@ -37,8 +38,14 @@ layout: default
     {% endfor %}
   </ul>
 
+  <h2>最新文章</h2>
+  {% for post in site.posts offset:1 limit:10 %}
+  <li>{{ post.date | date:"%b %-d, %Y" }} <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+  <li><a href="">更多文章......</a></li>
+
 <!-- Pagination links -->
-<div class="pagination">
+<!-- <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">上一页</a>
   {% else %}
@@ -50,6 +57,6 @@ layout: default
   {% else %}
     <span class="next ">Next</span>
   {% endif %}
-</div>
+</div> -->
 
 </div>

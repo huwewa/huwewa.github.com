@@ -187,3 +187,5 @@ function randomQuotes(quotes) {
   }
   document.querySelector('#random-quote').insertAdjacentHTML('beforeend', html);
 }
+
+//最新文章
