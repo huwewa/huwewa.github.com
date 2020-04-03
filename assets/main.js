@@ -162,17 +162,20 @@
 
 // 随机摘录
 function pickQuote() {
-  var quoteData;
-  var xhrPosts = new XMLHttpRequest();
-  xhrPosts.open('GET', '/quotes.json', true);
-  xhrPosts.onreadystatechange = function () {
-    if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
-      quoteData = xhrPosts.responseText;
-      quoteData = quoteData.split("quote_split");
-      randomQuotes(quoteData);
+  var elements = document.querySelector('#random-quote');
+  if (elements.length) {
+    var quoteData;
+    var xhrPosts = new XMLHttpRequest();
+    xhrPosts.open('GET', '/quotes.json', true);
+    xhrPosts.onreadystatechange = function () {
+      if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
+        quoteData = xhrPosts.responseText;
+        quoteData = quoteData.split("quote_split");
+        randomQuotes(quoteData);
+      }
     }
+    xhrPosts.send(null);
   }
-  xhrPosts.send(null);
 }
 
 //
@@ -181,13 +184,10 @@ window.onload = function() {
 }
 
 function randomQuotes(quotes) {
-  console.log("hello world");
-  console.log(quotes);
   if (quotes.length > 0){
     var index = Math.floor(Math.random() * quotes.length);
     document.querySelector('#random-quote').innerHTML = quotes[index];
   }
-  document.querySelector('#random-quote-test').innerHTML = "Hello World";
 }
 
 // 相关文章
