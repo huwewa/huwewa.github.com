@@ -166,12 +166,18 @@ function pickQuote() {
   if (elements !== null) {
     console.log("start get data");
     var quoteData;
-    $.get('/quotes.json', function(data) {
-      console.log("geting data");
-      console.log(data);
-      quoteData = data.split("quote_split");
-      randomQuotes(quoteData);      
-    }); 
+
+    var xhrPosts = new XMLHttpRequest();
+    xhrPosts.open('GET', '/quotes.json', true);
+    xhrPosts.onreadystatechange = function() {
+        console.log("geting data");
+        if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
+            quoteData = xhrPosts.responseText;
+            console.log(quoteData);
+            quoteData = quoteData.split("quote_split");
+            randomQuotes(quoteData);                 
+        }
+    }
     console.log("end get data");
     console.log(quoteData);
   }
