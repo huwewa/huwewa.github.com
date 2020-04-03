@@ -174,18 +174,10 @@ xhrPosts.onreadystatechange = function () {
 xhrPosts.send(null);
 //
 function randomQuotes(quotes) {
-  var used = [];
-  var counter = 0;
-  var html = '';
-  while (counter < 1) {
+  if (quotes.length > 0){
     var index = Math.floor(Math.random() * quotes.length);
-    if (used.indexOf(index) == '-1') {
-      html += quotes[index];
-      used.push(index);
-      counter++;
-    }
+    document.querySelector('#random-quote').insertAdjacentHTML('beforeend', "<div>" + quotes[index] + "</div>");
   }
-  document.querySelector('#random-quote').insertAdjacentHTML('beforeend', html);
 }
 
 // 相关文章
