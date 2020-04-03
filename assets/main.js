@@ -224,5 +224,5 @@ function randomPosts(posts) {
       counter++;
     }
   }
-  document.querySelector('#random-posts').insertAdjacentHTML('beforeend', html);
+  // document.querySelector('#random-posts').insertAdjacentHTML('beforeend', html);
 }
