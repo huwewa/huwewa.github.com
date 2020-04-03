@@ -163,7 +163,7 @@
 // 随机摘录
 var quoteData;
 var xhrPosts = new XMLHttpRequest();
-xhrPosts.open('GET', '/quotes.data', true);
+xhrPosts.open('GET', '/quotes.json', true);
 xhrPosts.onreadystatechange = function () {
   if (xhrPosts.readyState == 4 && xhrPosts.status == 200) {
     quoteData = xhrPosts.responseText;
