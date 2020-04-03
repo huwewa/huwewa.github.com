@@ -15,7 +15,7 @@ categories: IT技术
 
 如下面的例子：将代码保存为`closures.html`,然后使用浏临览器打开
 
-```
+``` javascript
 <script>
 	function add(x){
   		return function muli(y){alert(x*y);};

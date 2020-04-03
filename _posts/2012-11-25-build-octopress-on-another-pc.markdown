@@ -20,7 +20,7 @@ categories: IT技术
 ## 安装DevKit 
 版本要为４.５以上版本。因为版本要与Ruby版本对应。安装方法如下：
 
-```
+``` shell
 cd <DEVKIT_INSTALL_DIR>
 ruby dk.rb init
 ruby dk.rb install
@@ -33,7 +33,7 @@ gem install rdiscount --platform=ruby
 
 打开`Git Shell`使用以下命令clone GitHub上的octopress到本地。
 
-```
+``` git
 git clone -b source git@github.com:username/username.github.com.git octopress
 cd octopress
 git clone git@github.com:username/username.github.com.git _deploy
@@ -41,7 +41,7 @@ git clone git@github.com:username/username.github.com.git _deploy
 
 ## 安装依赖gems 
 
-```
+``` shell
 gem install bundler --pre 
 bundle install
 bundle update
@@ -53,7 +53,7 @@ bundle update
 ## 从GitHub中的octopress更新source内容到本地 
 因为是用两台电脑对同一个octopress写文章，所以就有同步的问题。每次写文章之前都应该从GitHub上拉取最新的`source`取本地。然后再写新文章。写完之后提交到GitHub。写文章之前执行以下命令：
 
-```
+``` shell
 cd _deploy
 git pull origin master
 cd ..
@@ -62,7 +62,7 @@ git pull origin source
 
 `rake new_post[文章标题]`写完文章之后执行以下命令提交到GitHub：
 
-```
+``` shell
 git add .
 git commit -m
 git push origin source
