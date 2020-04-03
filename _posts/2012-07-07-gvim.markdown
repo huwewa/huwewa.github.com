@@ -10,7 +10,7 @@ categories: IT技术
 
 - 解决文本内乱码
 
-```
+``` vim
 set encoding=utf-8
 set fileencodings=utf-8,chinese,latin-1
 if has("win32")
@@ -23,14 +23,14 @@ endif
 
 - 解决菜单乱码
 
-```
+``` shell
 source $VIMRUNTIME/delmenu.vim
 source $VIMRUNTIME/menu.vim
 ```
 
 -  解决consle乱码
 		
-```
+``` shell
 language messages zh_CN.utf-8
 ```
 
