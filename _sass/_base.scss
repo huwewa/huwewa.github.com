@@ -178,15 +178,9 @@ a {
  * Blockquotes
  */
 blockquote {
-    color: $grey-color;
+    color: $grey-color-dark;
     font-size: 15px;
-    margin: 2em 2em;
-    border-radius: 1em;
-    padding: 1em;
-    background-color: #f5f2f0;
-    border-width: 0.3em;
     border-color: #e0dfcc;
-    border-style: solid;
     text-shadow: 0 1px white;
     overflow: auto;
     font-family: Consolas, Monaco, 'Andale Mono', monospace;
