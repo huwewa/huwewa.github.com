@@ -1,8 +1,0 @@
----
-layout: post
-title: "功不唐捐"
-date: 2012-06-27 21:49
-comments: true
-categories: 引言摘录
----
-> 成功不必在我，而功力必不唐捐。
