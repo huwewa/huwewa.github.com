@@ -15,7 +15,7 @@ git push origin source
 
 google后在[stackoverflow](http://stackoverflow.com/questions/1402776/how-do-i-commit-all-deleted-files-in-git)上找到了方法。
 > git add -u
-> 
+> <br/>
 > This tells git to automatically stage tracked files -- including deleting the previously tracked files.
 
 要把`source`分支里相应的文件也删除，就可以使用下面命令
