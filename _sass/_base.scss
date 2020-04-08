@@ -169,6 +169,7 @@ a {
     &:hover {
         color: $text-color;
         text-decoration: underline;
+        text-underline-position: under;
     }
 }
 
@@ -330,6 +331,7 @@ pre {
 
 #alpha a {
     text-decoration: underline;
+    text-underline-position: under;
     color: #223472;
     &:hover {
         color: #D03500;
@@ -339,6 +341,7 @@ pre {
 div.page-content li {
     > a {
         text-decoration: underline;
+        text-underline-position: under;
     }
 }
 
@@ -368,26 +371,31 @@ span.tag_arch_category {
 a.next {
     color: #556677;
     text-decoration: underline;
+    text-underline-position: under;
 }
 
 a.prev {
     color: #556677;
     text-decoration: underline;
+    text-underline-position: under;
 }
 
 a.previous {
     color: #556677;
     text-decoration: underline;
+    text-underline-position: under;
 }
 
 #content .post-categories a {
     color: #556677;
     text-decoration: underline;
+    text-underline-position: under;
 }
 
 #content .post-tags a {
     color: #556677;
     text-decoration: underline;
+    text-underline-position: under;
 }
 
 ////// comment form //////
