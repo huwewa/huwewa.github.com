@@ -195,17 +195,15 @@ blockquote {
 }
 
 blockquote {
-  background: #f5f2f0;
+  background: #f5f5d5;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
-  quotes: "\201C""\201D""\2018""\2019";
   white-space: pre-wrap;
 }
 blockquote:before {
   /*   color: #ccc; */
   color: $grey-color-dark;
-  /* content: open-quote; */
   font-size: 4em;
   line-height: 0.1em;
   margin-right: 0.25em;
