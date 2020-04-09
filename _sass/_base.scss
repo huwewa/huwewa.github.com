@@ -215,6 +215,11 @@ blockquote p {
 blockquote:first-line {
   line-height: 0px;
 }
+blockquote {
+    > p {
+        margin-top: 0em;
+    }
+}
 
 /**
  * Code formatting
