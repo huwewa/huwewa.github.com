@@ -210,15 +210,10 @@ blockquote:before {
   vertical-align: -0.4em;
 }
 blockquote p {
-  display: inline-block;
+  display: inline;
 }
 blockquote:first-line {
   line-height: 0px;
-}
-blockquote {
-    > p {
-        margin-top: 0em;
-    }
 }
 
 /**
@@ -331,9 +326,7 @@ pre {
 }
 
 #alpha p {
-    margin-top: 1em;
     line-height: 180%;
-    /* margin-left: 0.8em; */
 }
 
 #alpha a {
