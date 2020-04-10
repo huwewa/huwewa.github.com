@@ -1,3 +1,0 @@
----
----
-[{% for post in site.posts %}{"title": "{{ post.title }}","url": "{{ post.url }}","category": "{{ post.categories }}","tags": "{{ post.tags }}"}{% unless forloop.last %},{% endunless %}{% endfor %}]

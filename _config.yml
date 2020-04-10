@@ -60,5 +60,3 @@ theme: jekyll-theme-tactile
 
 # Staticman comments
 staticmanUrl: https://api.staticman.net/v3/entry/github/huwewa/huwewa.github.com/master/comments
-
-# reCAPTCHA keys
