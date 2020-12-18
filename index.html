@@ -24,7 +24,7 @@ layout: default
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp;
         </p>
 
-        <div class="post-content-preview">
+        <div class="post-content">
           <p>
           {{ post.excerpt | strip_html }} 
           </p>
