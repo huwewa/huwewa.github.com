@@ -4,16 +4,14 @@ layout: default
 
 <div class="home">
 
-<!-- This loops through the paginated posts -->
-  <ul class="post-list">
+  <div class="post" id="content">
+
     {% for post in site.posts limit:1 %}
 
     {% assign minutes = post.content | strip_html | strip_newlines | size | divided_by: 500 %}
     {% if minutes == 0 %}
     {% assign minutes = 1 %}
     {% endif %}
-    <no>
-      <li>
         <no>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
             <h2>
@@ -24,16 +22,15 @@ layout: default
         <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp;
         </p>
 
-        <div class="post-content">
+        <article class="post-content" id="alpha">
           {{ post.excerpt | strip_html }} 
           <p>
-          <a href="{{ post.url}}">继续阅读全文 »</a>
+            <a href="{{ post.url}}">继续阅读全文 »</a>
           </p>
-        </div>
-      </li>
-    </no>
+        </article>
     {% endfor %}
-  </ul>
+
+  </div>
 
   <br/>
 
