@@ -62,4 +62,4 @@ theme: jekyll-theme-tactile
 staticmanUrl: https://api.staticman.net/v3/entry/github/huwewa/huwewa.github.com/master/comments
 
 # separator
-excerpt_separator:  '<!-- more -->'
+excerpt_separator:  <!-- more -->

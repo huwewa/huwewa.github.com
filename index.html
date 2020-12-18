@@ -2,31 +2,25 @@
 layout: default
 ---
 
-<div class="post" id="content">
+{% for post in site.posts limit:1 %}
 
-  {% for post in site.posts limit:1 %}
+  {% assign minutes = post.content | strip_html | strip_newlines | size | divided_by: 500 %}
+  {% if minutes == 0 %}
+  {% assign minutes = 1 %}
+  {% endif %}
+  <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+    <h2>
+      {{ post.title }}
+    </h2>
+  </a>
+  <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp;
+  </p>
 
-    {% assign minutes = post.content | strip_html | strip_newlines | size | divided_by: 500 %}
-    {% if minutes == 0 %}
-    {% assign minutes = 1 %}
-    {% endif %}
-    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
-      <h2>
-        {{ post.title }}
-      </h2>
-    </a>
-    <p class="post-meta">{{ post.date | date: "%b %-d, %Y" }}{% if post.author %} • {{ post.author }}{% endif %}{% if post.meta %} • {{ post.meta }}{% endif %} ({{ minutes }} minute read)&nbsp;&nbsp;
-    </p>
-
-    <article class="post-content" id="alpha">
-      {{ post.excerpt | strip_html }} 
-    </article>
-    <p>
-      <a href="{{ post.url}}">继续阅读全文 »</a>
-    </p>
-  {% endfor %}
-
-</div>
+  {{ post.excerpt }} 
+  <p>
+    <a href="{{ post.url}}">继续阅读全文 »</a>
+  </p>
+{% endfor %}
 
 <br/>
 
