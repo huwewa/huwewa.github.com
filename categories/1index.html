@@ -16,7 +16,7 @@ permalink: /category/
 <div>
     <span class="tag_arch_category">
     {% for categorie in sortedcategories %}
-    <t><a href="/category/#{{ categorie | slugize }}">{{ categorie }}</a><sup> {{ site.categories[categorie].size }}</sup></t>&nbsp;&nbsp;&nbsp;
+    <nobr><t><a href="/category/#{{ categorie | slugize }}">{{ categorie }}</a><sup> {{ site.categories[categorie].size }}</sup></t></nobr>&nbsp;&nbsp;&nbsp;
     {% endfor %}
     </span>
 
