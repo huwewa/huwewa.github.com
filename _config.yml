@@ -23,18 +23,20 @@ kramdown:
  syntax_highlighter: rouge
 
 highlighter: rouge
-gems:
+plugins:
   - jekyll-coffeescript
   - jekyll-gist
   - jekyll-mentions
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-sitemap
 whitelist:
   - jekyll-coffeescript
   - jekyll-gist
   - jekyll-mentions
   - jekyll-paginate
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 # post date timezone
 future: true
