@@ -30,13 +30,6 @@ plugins:
   - jekyll-paginate
   - jekyll-redirect-from
   - jekyll-sitemap
-whitelist:
-  - jekyll-coffeescript
-  - jekyll-gist
-  - jekyll-mentions
-  - jekyll-paginate
-  - jekyll-redirect-from
-  - jekyll-sitemap
 
 # post date timezone
 future: true
@@ -57,11 +50,6 @@ collections:
  menu:
   output: true
   permalink: /:collection/:year/:month/:day/:title.html
-
-theme: jekyll-theme-tactile
-
-# Staticman comments
-staticmanUrl: https://api.staticman.net/v3/entry/github/huwewa/huwewa.github.com/master/comments
 
 # separator
 excerpt_separator:  <!-- more -->

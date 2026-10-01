@@ -1,7 +1,7 @@
 _site
 .sass-cache
 .jekyll-metadata
-.idea/*
-huwewa.github.com.iml
+.idea/
+*.iml
+Gemfile.lock
 !/_quotes/.xxxx.txt.icloud
-
