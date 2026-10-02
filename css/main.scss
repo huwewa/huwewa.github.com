@@ -54,36 +54,3 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
-
-.photo-gallery, .photo-gallery li {
-    list-style: none;
-    padding: 0;
-}
-
-.photo-gallery li {
-    display: inline-block;
-    width: 33%;
-}
-
-.photo-gallery li img {
-    width: 100%;
-}
-
-.post-content-preview {
-//   font-size: 16px;
-  color: #111111;
-  line-height: 180%;
-
-    > p {
-        > a {
-            color: #008000;
-            &:hover {
-                color: #112233;
-            }
-
-        }
-    }
-}
-.post-content-preview:hover {
-  color: #111111;
-}
