@@ -19,33 +19,33 @@ title:
   {% endif %}
 {% endfor %}
 
+{% comment %}
+  把 "2014_3,2015_1,..." 拆成条数数组，按组序号精确取计数
+{% endcomment %}
+{% assign counts_list = "" %}
+{% assign yc_list = year_count | split: "," %}
+{% for yc in yc_list %}
+  {% assign parts = yc | split: "_" %}
+  {% assign counts_list = counts_list | append: parts[1] | append: "," %}
+{% endfor %}
+{% assign count_arr = counts_list | split: "," %}
 
+
+{% comment %}
+  按年份分组输出。每组的 <li> 都包在 <ul> 里 —— 原先 <li> 裸奔，
+  没有任何 <ul> 父级，ul{margin-left:30px} 作用不到它，
+  方块黑点被顶到容器最左边。
+{% endcomment %}
+{% assign group_index = 0 %}
 {% for post in site.photos reversed %}
-  {% unless post.next %}
-    {% assign temval = year_count | split: "," %}
-    {% assign y = post.date | date: '%Y' %}
-    {% for y_c in temval %}
-      {% if y_c contains y %}
-        {% assign arr = y_c | split: "_" %}
-        <h3>{{ arr[0] }}({{ arr[1] }})</h3>
-        {% break %}
-      {% endif %}
-    {% endfor %}
-  {% else %}
-    {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
-    {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
-    {% if year != nyear %}
-      {% assign temval = year_count | split: "," %}
-      {% assign y = post.date | date: '%Y' %}
-      {% for y_c in temval %}
-        {% if y_c contains y %}
-          {% assign arr = y_c | split: "_" %}
-          <br/>
-          <h3>{{ arr[0] }}({{ arr[1] }})</h3>
-          {% break %}
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endunless %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% capture nyear %}{{ post.next.date | date: '%Y' }}{% endcapture %}
+  {% if year != nyear %}
+    {% if forloop.first != true %}</ul>{% endif %}
+    <h3>{{ year }}({{ count_arr[group_index] }})</h3>
+    <ul>
+    {% assign group_index = group_index | plus: 1 %}
+  {% endif %}
   <li>{{ post.date | date:"%b" }} <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></li>
+  {% if forloop.last %}</ul>{% endif %}
 {% endfor %}
