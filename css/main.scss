@@ -54,3 +54,24 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+
+// 首页「最新文章」列表
+// 全局 li 是 line-height:220% / list-style:square，对短条目（归档页）合适，
+// 但首页条目含较长的日期（"Jan 15, 2023"），需要更紧凑的缩进与行距，
+// 并把日期弱化，让标题更突出。
+.latest-posts {
+    margin-left: 1.1em;
+    padding: 0;
+
+    li {
+        line-height: 1.85;
+        list-style-position: outside;
+        margin-bottom: 2px;
+    }
+
+    .post-date {
+        color: $grey-color;
+        font-size: $small-font-size;
+    }
+}

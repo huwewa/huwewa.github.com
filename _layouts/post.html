@@ -3,13 +3,6 @@ layout: default
 ---
 <div class="post" id="content">
 
-  {% capture post_slug %}{{ page.layout }}-{{ page.date | date: "%Y" }}-{{ page.date | date: "%m" }}-{{ page.date | date: "%d" }}-{{ page.date | date: "%H" }}-{{ page.date | date: "%M" }}{% endcapture %}
-  {% if page.comments_status %}
-    {% capture comments_status %}{{ page.comments_status }}{% endcapture %}
-  {% else %}
-    {% assign comments_status = "open" %}
-  {% endif %}
-
   {% capture post_date %}{{ page.date | date: "%Y" }}年{{ page.date | date: "%m" }}月{{ page.date | date: "%d" }}日{% endcapture %}
 
   {% assign minutes = content | strip_html | strip_newlines | size | divided_by: 500 %}
