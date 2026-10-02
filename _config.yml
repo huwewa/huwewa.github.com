@@ -25,7 +25,6 @@ kramdown:
 highlighter: rouge
 plugins:
   - jekyll-gist
-  - jekyll-paginate
   - jekyll-sitemap
 
 # post date timezone
@@ -33,8 +32,6 @@ future: true
 
 # Outputting
 permalink: /:categories/:year/:month/:day/:title.html
-paginate: 10
-paginate_path: "/page:num/"
 timezone: null
 
 collections:
