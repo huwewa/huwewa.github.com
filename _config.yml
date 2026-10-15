@@ -34,9 +34,6 @@ future: true
 permalink: /:categories/:year/:month/:day/:title.html
 timezone: null
 
-# 静态目录（不由 Jekyll 处理）
-exclude:
-  - x-digest/
 
 collections:
  photos:
