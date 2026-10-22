@@ -23,15 +23,27 @@ li:before{content:"";position:absolute;left:0;top:16px;width:5px;height:5px;bord
 li:last-child{border-bottom:none}
 strong{color:#fff;font-weight:600}
 a{color:var(--acc);text-decoration:none}
-.pager{display:flex;gap:10px;flex-wrap:wrap;margin:26px 0 0;padding-top:18px;border-top:1px solid var(--line)}
-.pager a{background:var(--card);padding:9px 14px;border-radius:9px;font-size:13px;
- border:1px solid var(--line);color:var(--fg)}
+.pager{display:flex;gap:8px;flex-wrap:wrap;margin:22px 0 0;padding-top:16px;border-top:1px solid var(--line)}
+.pager a{background:var(--card);padding:8px 12px;border-radius:9px;font-size:13px;
+ border:1px solid var(--line);color:var(--fg);white-space:nowrap}
 .pager a.cur{background:var(--acc);color:#04101f;border-color:var(--acc);font-weight:600}
+.pager a.all{border-style:dashed;color:var(--dim)}
+.pager .gap{color:var(--dim);padding:8px 2px;font-size:13px;align-self:center}
+.nav{display:flex;gap:10px;justify-content:space-between;margin:26px 0 0}
+.nav a{background:var(--card);padding:10px 14px;border-radius:9px;font-size:13px;
+ border:1px solid var(--line);color:var(--fg)}
 footer{color:var(--dim);font-size:12px;margin-top:34px;text-align:center}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
 .idx a{display:block;padding:14px 16px;margin:9px 0;background:var(--card);
  border:1px solid var(--line);border-radius:11px;color:var(--fg)}
 .idx a span{display:block;color:var(--dim);font-size:12px;margin-top:4px}
+.idx details{margin:14px 0}
+.idx summary{cursor:pointer;padding:12px 16px;background:var(--card);border-radius:11px;
+ border:1px solid var(--line);font-size:15px;font-weight:600;list-style:none}
+.idx summary::-webkit-details-marker{display:none}
+.idx summary:before{content:"▸ ";color:var(--acc)}
+.idx details[open] summary:before{content:"▾ "}
+.idx summary em{color:var(--dim);font-style:normal;font-size:12px;font-weight:400}
 </style></head>
 <body><div class="wrap">
 <header>
@@ -55,6 +67,7 @@ footer{color:var(--dim);font-size:12px;margin-top:34px;text-align:center}
 <ul><li><strong>@turingou 的 Grok Bot 生活流</strong>：三餐规划采购制作、通过 Codex 操作日立烤箱、预约洗牙美容剪发，日历排满。作为"agent 接管日常事务"的极端样本值得一看，但可复制性高度依赖设备生态。</li><li><strong>@yetone 为跑 Claude Code subagent 再买一台 Mac mini</strong>："第一次在家庭内部搞分布式计算是为了 Vibe Coding"。并行 subagent 对本地算力的挤压是真实痛点。</li><li><strong>京东 Mac mini M6 好价</strong>：24G/512G（12C+12G+16N 2.5G 网口）叠加 PLUS 券与国补到手约 7439 元；另有拼多多百亿补贴 4599 元的路径。AirPods Pro 3 叠国补约 1121 元。</li><li><strong>@kangke888 记录的罕见真菌病例</strong>：27 岁动物救助博主感染东方伊蒙菌病逝，致病源为啮齿动物活动土壤中的环境真菌孢子，非猫狗直接传播。极低概率暴露事件，但对养宠与野外作业者有科普价值。</li></ul>
 <h2>一句话结论</h2>
 <ul><li><strong>SpaceX 与特斯拉的合并已从传闻进入"有时间表"阶段，而 SpaceX 的 AI 收入占比过半、增速 830%——这不是一家火箭公司，是一台正在被重新定价的算力+发射复合体，马斯克系资产的估值框架要重写。</strong></li><li><strong>DeepSeek 开源 DeepInfer 的意义大于又发一个模型：它把生产级推理服务的成本结构公开了，配合 Agent Arena 开源第一，中国团队在"推理效率"这条线上的领先正在从口碑变成可验证的工程资产。</strong></li><li><strong>AI 算力链第一次同时出现三个负面信号——亚马逊堆积装不上的 GPU、Oracle CDS 违约概率破 24%、CoreWeave 的 ROIC 低于借债成本——资本开支的回报闭环尚未验证，这是当前美股最大的单点风险。</strong></li><li><strong>Agent 工程的共识正在收敛：单一大 Agent 会因上下文过载而变差，薄编排器 + 专用子 Agent + 长缓存才是正解；Codex 永久缓存和 Meta 的 Thin Orchestrator 是同一件事的两面。</strong></li><li><strong>对独立开发者，本周最实用的两条是：Claude Code 已能打通封闭硬件生态（Alexa、电视、烤箱），以及 tsrs 证明 agent 可以在几周内重写大型基础设施——工具链的重写成本正在坍塌。</strong></li></ul>
-<div class="pager"><a href="/x-digest/2026-10-22.html">10/22</a><a class="cur" href="/x-digest/2026-10-21.html">10/21</a><a href="/x-digest/2026-10-20.html">10/20</a><a href="/x-digest/2026-10-19.html">10/19</a><a href="/x-digest/2026-10-18.html">10/18</a><a href="/x-digest/2026-10-17.html">10/17</a><a href="/x-digest/2026-10-16.html">10/16</a><a href="/x-digest/2026-10-15.html">10/15</a><a href="/x-digest/">全部</a></div>
+<div class="nav"><a href="/x-digest/2026-10-20.html">← 10/20</a><a href="/x-digest/2026-10-22.html">10/22 →</a></div>
+<div class="pager"><a href="/x-digest/2026-10-22.html">10/22</a><a class="cur" href="/x-digest/2026-10-21.html">10/21</a><a href="/x-digest/2026-10-20.html">10/20</a><a href="/x-digest/2026-10-19.html">10/19</a><a class="all" href="/x-digest/">全部 8 期</a></div>
 <footer>由 AWS + DeepSeek 自动生成 · 仅供本人阅读</footer>
 </div></body></html>
