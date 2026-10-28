@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>操场徒手力量 · 动作示范</title>
+<title>操场徒手力量 · 一周计划与动作示范</title>
 <style>
   * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   body {
@@ -23,13 +23,27 @@
     font-size: 11px; border-radius: 20px;
     background: rgba(64,180,130,.15); color: #4fc98f; border: 1px solid rgba(64,180,130,.3);
   }
-  .slot { padding: 22px 14px 6px; }
-  .slothead { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .warn {
+    margin: 20px 14px 0; padding: 14px 16px;
+    background: rgba(214,160,60,.09); border: 1px solid rgba(214,160,60,.25);
+    border-radius: 12px; font-size: 12.5px; color: #d6b47a;
+  }
+  .warn b { color: #e6c98f; }
+
+  .day { padding: 18px 14px 4px; }
+  .dayhead { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .dayhead h3 { margin: 0; font-size: 16px; font-weight: 600; }
   .tag {
     font-size: 11px; padding: 2px 8px; border-radius: 6px;
     background: #232d3a; color: #7fb2e5; letter-spacing: .5px; white-space: nowrap;
   }
-  .slothead h3 { margin: 0; font-size: 16px; font-weight: 600; }
+  .runbox {
+    margin: 6px 14px 0; padding: 12px 14px;
+    background: #13161a; border: 1px dashed #2c333c; border-radius: 12px;
+  }
+  .runbox .rt { font-size: 13.5px; font-weight: 600; color: #9fc4e8; margin-bottom: 4px; }
+  .runbox p { margin: 0; font-size: 12.5px; color: #8f98a4; }
+  .rest { text-align: center; color: #5f6773; font-size: 12px; padding: 12px 0 14px; }
   .card {
     display: flex; gap: 12px; align-items: flex-start;
     background: #16191e; border: 1px solid #23282f;
@@ -47,41 +61,43 @@
   }
   .tip { margin: 0; font-size: 12.5px; color: #a9b2be; }
   .note {
-    font-size: 12px; color: #7d8794; margin: 2px 4px 16px;
+    font-size: 12px; color: #7d8794; margin: 2px 4px 14px;
     padding-left: 10px; border-left: 2px solid #2b323b;
   }
-  .warn {
-    margin: 20px 14px 0; padding: 14px 16px;
-    background: rgba(214,160,60,.09); border: 1px solid rgba(214,160,60,.25);
-    border-radius: 12px; font-size: 12.5px; color: #d6b47a;
+  .grid { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 8px; }
+  .mini {
+    flex: 1 1 46%; display: flex; gap: 8px; align-items: center;
+    background: #16191e; border: 1px solid #23282f; border-radius: 10px; padding: 8px;
   }
-  .warn b { color: #e6c98f; }
+  .mini img { width: 44px; height: 44px; border-radius: 7px; background: #f2f4f7; object-fit: contain; flex: 0 0 44px; }
+  .mini .mt { font-size: 12px; line-height: 1.35; color: #c8ced6; }
 </style>
 </head>
 <body>
 <header>
-  <h1>操场徒手力量 · 动作示范</h1>
-  <p>GIF 循环播放：红色高亮是发力肌群。全徒手，只需地面和一段台阶。</p>
-  <span class="badge">每周 3 次 · 无器械</span>
+  <h1>操场徒手力量 · 一周计划</h1>
+  <p>周一至周五每天做什么、跑多少，一页看完。红色高亮为发力肌群。</p>
+  <span class="badge">周一–周五 · 全徒手</span>
 </header>
 
-<div class="slot"><div class="slothead"><span class="tag">周一</span><h3>下肢 A · 约 25 min</h3></div>
+<div class="runbox"><div class="rt">周一 · 下肢力量优先（约 85 min）</div><p>热身 4 min → 力量 25 min → 轻松跑 6 km（6'10"–6'30"）。<b>力量必须放在跑步前</b>——跑完 40 分钟再蹲，股四头已疲劳，动作会崩。</p></div>
+<div class="day"><div class="dayhead"><span class="tag">周一</span><h3>下肢 A</h3></div>
 
         <div class="card">
-          <img class="gif" src="gifs/2368.gif" alt="保加利亚分腿蹲 / 分腿蹲" loading="lazy">
+          <img class="gif" src="gifs/2368.gif" alt="保加利亚分腿蹲" loading="lazy">
           <div class="info">
-            <h4>保加利亚分腿蹲 / 分腿蹲</h4>
+            <h4>保加利亚分腿蹲</h4>
             <div class="dose">4 组 × 8–12/腿 · 组间 90 秒</div>
-            <p class="tip">后脚搭长椅或看台台阶（没有就把后脚放低一点做分腿蹲）。前腿下蹲到大腿接近平行，重心压前腿，后腿只做稳定。</p>
+            <p class="tip">后脚搭长椅或看台台阶。前腿下蹲到大腿接近平行，重心压前腿，后腿只做稳定。</p>
           </div>
         </div>
 
         <div class="card">
-          <img class="gif" src="gifs/0514.gif" alt="深蹲 / 停顿深蹲" loading="lazy">
+          <img class="gif" src="gifs/0514.gif" alt="停顿深蹲" loading="lazy">
           <div class="info">
-            <h4>深蹲 / 停顿深蹲</h4>
+            <h4>停顿深蹲</h4>
             <div class="dose">3 组 × 12 · 下 3 秒停 2 秒</div>
-            <p class="tip">蹲到大腿平行或更低，底部停 2 秒再起。慢是核心——同样 12 次，慢做的刺激等于快做的 3 倍。</p>
+            <p class="tip">蹲到大腿平行或更低，底部停 2 秒再起。同样 12 次，慢做的刺激约等于快做的 3 倍。</p>
           </div>
         </div>
 
@@ -95,128 +111,67 @@
         </div>
 
         <div class="card">
-          <img class="gif" src="gifs/1490.gif" alt="单腿提踵" loading="lazy">
+          <img class="gif" src="gifs/1373.gif" alt="单腿提踵" loading="lazy">
           <div class="info">
             <h4>单腿提踵</h4>
             <div class="dose">3 组 × 15/腿</div>
             <p class="tip">前脚掌站在台阶边缘，脚跟下沉到低于台阶，再发力顶到最高。小腿力量直接关系到落地缓冲。</p>
           </div>
         </div>
-<p class="note">热身 4 分钟：高抬腿 → 髋绕环 → 活动脚踝 → 空身蹲 15 次。力量做完直接接 6 km 轻松跑。</p></div><div class="slot"><div class="slothead"><span class="tag">周二</span><h3>上肢 + 核心 · 约 32 min</h3></div>
+<p class="note">深蹲跳（与深蹲同一动图）可替代停顿深蹲做爆发版本，每周不超过一次；膝盖不适就换回停顿深蹲。</p></div>
+<div class="runbox"><div class="rt">周二 · 上肢与核心（约 85 min）</div><p>力量 30 min → 轻松跑 7 km（6'00"–6'20"）。这天最挤，时间不够就把跑量降到 6 km，不要砍力量。</p></div>
+<div class="day"><div class="dayhead"><span class="tag">周二</span><h3>上肢 + 核心</h3></div>
+<div class="grid"><div class="mini"><img src="gifs/0662.gif" loading="lazy" alt="俯卧撑"><div class="mt">俯卧撑<br><span style="color:#4fc98f">4 组 · 接近力竭</span></div></div><div class="mini"><img src="gifs/0471.gif" loading="lazy" alt="派克俯卧撑"><div class="mt">派克俯卧撑<br><span style="color:#4fc98f">3 组 × 10</span></div></div><div class="mini"><img src="gifs/3645.gif" loading="lazy" alt="俯卧超人式"><div class="mt">俯卧超人式<br><span style="color:#4fc98f">3 组 × 10 · 停 2 秒</span></div></div><div class="mini"><img src="gifs/0276.gif" loading="lazy" alt="死虫式"><div class="mt">死虫式<br><span style="color:#4fc98f">3 组 × 10/侧</span></div></div><div class="mini"><img src="gifs/0705.gif" loading="lazy" alt="侧平板"><div class="mt">侧平板<br><span style="color:#4fc98f">2 组 × 30 秒/侧</span></div></div></div><p class="note">俯卧撑做不满 8 个就手撑台阶做上斜版；上斜/下斜只是难度调节，不算独立动作。平板上加「交替摸对侧肩」即抗旋转版本。</p></div>
+<div class="runbox"><div class="rt">周三 · 质量跑（约 75 min）</div><p>慢跑 2 km 热身 → 4×1000 m @5'00"–5'10"，组间慢跑 400 m → 慢跑 2 km 收尾 + 拉伸。</p></div>
+<div class="rest">— 周三不安排力量训练，给周一、周二的腿留恢复 —</div>
+<div class="runbox"><div class="rt">周四 · 下肢力量（约 85 min）</div><p>力量 25 min → 轻松跑 6 km（6'10"–6'30"）。定位是「次重、不追求力竭」，让周一之后的腿有恢复空间。</p></div>
+<div class="day"><div class="dayhead"><span class="tag">周四</span><h3>下肢 B（次重）</h3></div>
 
         <div class="card">
-          <img class="gif" src="gifs/0662.gif" alt="俯卧撑" loading="lazy">
+          <img class="gif" src="gifs/0293.gif" alt="单腿硬拉（徒手）" loading="lazy">
           <div class="info">
-            <h4>俯卧撑</h4>
-            <div class="dose">4 组 · 做到剩 1–2 个</div>
-            <p class="tip">手略宽于肩，身体成一条直线，肘部约 45° 下放到胸口接近地面。做不满 8 个先退回上斜（手撑台阶）。</p>
+            <h4>单腿硬拉（徒手）</h4>
+            <div class="dose">3 组 × 10/腿 · 慢放 4 秒</div>
+            <p class="tip">一条腿支撑，另一条腿向后伸，上身前倾到接近水平，再靠臀和腘绳把身体「拉」回来。练臀、腘绳与髋稳定，是跑者最该练的链条。替代俯卧挺身——后者需要固定脚踝，空地做不了。（图为负重俯身髋铰链，动作轨迹相同，你不需要哑铃）</p>
           </div>
         </div>
 
         <div class="card">
-          <img class="gif" src="gifs/0493.gif" alt="上斜俯卧撑（退阶）" loading="lazy">
+          <img class="gif" src="gifs/1759.gif" alt="单腿箱式蹲" loading="lazy">
           <div class="info">
-            <h4>上斜俯卧撑（退阶）</h4>
-            <div class="dose">难度调节用</div>
-            <p class="tip">手撑台阶或长椅，越高越简单。俯卧撑做不满时用这个把组数补齐。</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="gif" src="gifs/0279.gif" alt="下斜俯卧撑（进阶）" loading="lazy">
-          <div class="info">
-            <h4>下斜俯卧撑（进阶）</h4>
-            <div class="dose">难度调节用</div>
-            <p class="tip">脚垫高 = 更多上胸和肩部负荷。标准俯卧撑能轻松做 15 个后，换这个。</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="gif" src="gifs/0471.gif" alt="派克俯卧撑（补肩推）" loading="lazy">
-          <div class="info">
-            <h4>派克俯卧撑（补肩推）</h4>
-            <div class="dose">3 组 × 10</div>
-            <p class="tip">弯腰、臀部抬高，身体成倒 V 形，头往地面下压再推起。没有哑铃时，这是最好的肩部推举替代。</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="gif" src="gifs/3663.gif" alt="反向平板支撑" loading="lazy">
-          <div class="info">
-            <h4>反向平板支撑</h4>
-            <div class="dose">2 组 × 20–30 秒</div>
-            <p class="tip">坐地撑起身体成反弓形，臀和背等长发力。练背和臀，跑者防含胸用得上。</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="gif" src="gifs/0705.gif" alt="侧平板" loading="lazy">
-          <div class="info">
-            <h4>侧平板</h4>
-            <div class="dose">2 组 × 30 秒/侧</div>
-            <p class="tip">侧卧单肘支撑，髋部顶起成斜线，身体不塌不翘。练侧向稳定，跑步抗旋转。</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="gif" src="gifs/3239.gif" alt="平板支撑（摸肩版）" loading="lazy">
-          <div class="info">
-            <h4>平板支撑（摸肩版）</h4>
-            <div class="dose">3 组 × 45–60 秒</div>
-            <p class="tip">标准平板基础上，交替抬手摸对侧肩。核心抗旋转，比静态平板更能练到跑姿需要的稳定。</p>
-          </div>
-        </div>
-<p class="note">补背：俯卧 Y-T-W 抬臂（趴地，手臂分别摆成 Y、T、W，各 12 次 × 3 轮）。没单杠时这是替代划船的动作。</p></div><div class="slot"><div class="slothead"><span class="tag">周四</span><h3>下肢 B · 约 24 min · 次重</h3></div>
-
-        <div class="card">
-          <img class="gif" src="gifs/2368.gif" alt="上台阶 / 单腿起立" loading="lazy">
-          <div class="info">
-            <h4>上台阶 / 单腿起立</h4>
+            <h4>单腿箱式蹲</h4>
             <div class="dose">3 组 × 8/腿</div>
-            <p class="tip">踩上台阶后单腿发力站起（或用提膝版）。单侧承重是没负重时最好的强度来源。</p>
+            <p class="tip">坐在长凳或看台台阶上，用一条腿站起来，全程控制、慢慢坐回。单侧承重是没负重时最好的强度来源；太难就先双手扶固定物、或降低凳高。</p>
           </div>
         </div>
 
         <div class="card">
-          <img class="gif" src="gifs/1460.gif" alt="行进箭步蹲" loading="lazy">
+          <img class="gif" src="gifs/0484.gif" alt="臀桥" loading="lazy">
           <div class="info">
-            <h4>行进箭步蹲</h4>
-            <div class="dose">3 组 × 10/腿</div>
-            <p class="tip">向前跨一大步，后膝下沉接近地面，前脚发力起身。控制节奏，别靠惯性甩。</p>
+            <h4>臀桥</h4>
+            <div class="dose">3 组 × 15 · 顶端停 1 秒</div>
+            <p class="tip">仰卧屈膝双脚踩地，臀部发力顶髋，顶端夹紧停 1 秒。与单腿臀桥同属髋伸链，区别是双侧更偏耐力与激活。</p>
           </div>
         </div>
 
         <div class="card">
-          <img class="gif" src="gifs/0489.gif" alt="俯卧挺身（替代单腿硬拉）" loading="lazy">
+          <img class="gif" src="gifs/3561.gif" alt="鸟狗式" loading="lazy">
           <div class="info">
-            <h4>俯卧挺身（替代单腿硬拉）</h4>
-            <div class="dose">3 组 × 10</div>
-            <p class="tip">俯卧，手放耳侧，用臀和背把上身抬起，停 1 秒缓慢放下。练竖脊肌和臀，替代无器械时的硬拉。</p>
+            <h4>鸟狗式</h4>
+            <div class="dose">3 组 × 10/侧 · 停 2 秒</div>
+            <p class="tip">四点跪撑，对侧手脚同时伸展，停 2 秒再换边。练躯干抗旋转，对跑姿稳定性很有用。（图为臀桥行军步，同为四点/仰卧下的躯干稳定训练，动作节奏可参考）</p>
           </div>
         </div>
+<p class="note">髋主导（单腿硬拉）+ 膝主导单侧（单腿箱式蹲）+ 髋伸（臀桥）+ 抗旋转（鸟狗），四个动作覆盖四种模式。</p></div>
+<div class="runbox"><div class="rt">周五 · 长一点轻松跑（约 90 min）</div><p>10–11 km @6'00"–6'20"，全程能说话。周一至周四压掉的里程在这里补回来。</p></div>
+<div class="rest">— 周五不安排力量训练 —</div>
+<div class="runbox"><div class="rt">周六 / 周日 · 完全休息</div><p>不训练。睡眠 7–8 小时，蛋白质 90–100 g/天——肌肉量的另一半在这两天解决。</p></div>
 
-        <div class="card">
-          <img class="gif" src="gifs/1759.gif" alt="单腿深蹲（强度选项）" loading="lazy">
-          <div class="info">
-            <h4>单腿深蹲（强度选项）</h4>
-            <div class="dose">3 组 × 5–8/腿</div>
-            <p class="tip">手枪蹲难度较高，蹲不下去就手扶固定物做。作为进阶选项，不是必做。</p>
-          </div>
-        </div>
-
-        <div class="card">
-          <img class="gif" src="gifs/0276.gif" alt="死虫式" loading="lazy">
-          <div class="info">
-            <h4>死虫式</h4>
-            <div class="dose">3 组 × 10/侧</div>
-            <p class="tip">仰卧，手脚交替伸展，腰始终贴地。练核心稳定性，收腰效果比卷腹好。</p>
-          </div>
-        </div>
-<p class="note">这一天定位是「次重、不追求力竭」，给周一的腿留恢复空间。做完接 6 km 轻松跑。</p></div>
 <div class="warn">
   <b>强度判断：</b>每组做完还能再做 2–3 次 = 合适；能轻松再做 10 次 = 太轻，先检查蹲得够不够深、放得够不够慢；做完直接趴下或动作变形 = 减次数。<br><br>
   <b>进阶顺序：</b>加幅度 → 加节奏（下放 4 秒、底停 2 秒）→ 单侧 → 4–6 周后才考虑负重。<br><br>
-  <b>动图来源：</b>开源健身动作库 exercises-dataset-zh（Gym visual 授权），240×240 循环演示。
+  <b>共 14 个动作：</b>覆盖髋膝主导（双侧/单侧）、髋伸、踝伸、水平推、垂直推、水平拉、抗伸展、抗侧屈、抗旋转。每个动作负责不同模式，彼此不重复。<br><br>
+  <b>动图来源：</b>开源健身动作库 exercises-dataset-zh（Gym visual 授权）。部分动图为同模式动作示意，已在说明中标注。
 </div>
 </body>
 </html>
